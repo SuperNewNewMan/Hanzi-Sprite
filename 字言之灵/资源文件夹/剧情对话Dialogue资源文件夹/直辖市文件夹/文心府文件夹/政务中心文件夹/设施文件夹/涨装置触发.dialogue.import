@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b5hlqknwkyrxd"
+path="res://.godot/imported/涨装置触发.dialogue-ec7ec4e7d599de77f5d68e0dfa4f015b.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/设施文件夹/涨装置触发.dialogue"
+dest_files=["res://.godot/imported/涨装置触发.dialogue-ec7ec4e7d599de77f5d68e0dfa4f015b.tres"]
+
+[params]
+
+defaults=true

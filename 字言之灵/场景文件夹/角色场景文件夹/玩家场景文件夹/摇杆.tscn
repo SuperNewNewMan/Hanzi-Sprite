@@ -1,0 +1,428 @@
+[gd_scene format=3 uid="uid://cxdgvvrwou0g"]
+
+[ext_resource type="Script" uid="uid://dop2vlmtfovr0" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/功能型工具脚本文件夹/操作摇杆脚本.cs" id="1_5hww4"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="1_6dfcn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nanv"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dfcn"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hww4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrden"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve38c"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugost"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugost"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(144, 0, 32, 32)
+
+[sub_resource type="FontFile" id="FontFile_5hww4"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ve38c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f4rlh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjoi3"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(193, 1, 28, 44)
+
+[sub_resource type="SystemFont" id="SystemFont_5hww4"]
+subpixel_positioning = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22unk"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(64, 144, 48, 40)
+
+[sub_resource type="Animation" id="Animation_5hww4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("任务提示:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("任务提示:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(37, 96)]
+}
+
+[sub_resource type="Animation" id="Animation_wrden"]
+resource_name = "任务提示动画"
+length = 0.6
+loop_mode = 2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("任务提示:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("任务提示:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(37, 96), Vector2(37, 118)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4rlh"]
+_data = {
+&"RESET": SubResource("Animation_5hww4"),
+&"任务提示动画": SubResource("Animation_wrden")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hww4"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(43, 92, 42, 36)
+
+[sub_resource type="Animation" id="Animation_f4rlh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("任务提示:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("任务提示:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(37, 96)]
+}
+
+[sub_resource type="Animation" id="Animation_bjoi3"]
+resource_name = "背包提示动画"
+length = 0.6
+loop_mode = 2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("任务提示:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("任务提示:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(37, 96), Vector2(37, 118)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_22unk"]
+_data = {
+&"RESET": SubResource("Animation_f4rlh"),
+&"背包提示动画": SubResource("Animation_bjoi3")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjoi3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrden"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(100, 101, 41, 23)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_22unk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4rlh"]
+atlas = ExtResource("1_6dfcn")
+region = Rect2(153, 82, 30, 43)
+
+[node name="操作摇杆画布层" type="CanvasLayer" unique_id=1716310004]
+script = ExtResource("1_5hww4")
+
+[node name="摇杆总节点" type="Node2D" parent="." unique_id=1567008507]
+
+[node name="移动摇杆总节点" type="Node2D" parent="摇杆总节点" unique_id=2066559378]
+visible = false
+
+[node name="移动摇杆背景精灵" type="Sprite2D" parent="摇杆总节点/移动摇杆总节点" unique_id=585775441]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(165, 490)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2nanv")
+
+[node name="移动摇杆精灵" type="Sprite2D" parent="摇杆总节点/移动摇杆总节点/移动摇杆背景精灵" unique_id=2018647326]
+texture = SubResource("AtlasTexture_6dfcn")
+
+[node name="按钮总节点" type="Node2D" parent="摇杆总节点" unique_id=140797883]
+
+[node name="F按钮" type="Button" parent="摇杆总节点/按钮总节点" unique_id=1599069416]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(57.6, 57.6)
+offset_left = 952.0
+offset_top = 470.0
+offset_right = 1009.6
+offset_bottom = 527.6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hww4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wrden")
+icon = SubResource("AtlasTexture_ve38c")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Shift按钮" type="Button" parent="摇杆总节点/按钮总节点" unique_id=871356748]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(57.6, 57.6)
+offset_left = 894.0
+offset_top = 550.0
+offset_right = 1079.0
+offset_bottom = 607.6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ugost")
+text = "跑Shift"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Esc按钮" type="Button" parent="摇杆总节点/按钮总节点" unique_id=860239498]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(57.6, 57.6)
+offset_right = 57.6
+offset_bottom = 57.6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hww4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wrden")
+icon = SubResource("AtlasTexture_ugost")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="摇杆总节点/按钮总节点/Esc按钮" unique_id=308420046]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -28.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("FontFile_5hww4")
+text = "Esc"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="摇杆总节点/按钮总节点" unique_id=153542667]
+custom_minimum_size = Vector2(400, 80)
+offset_left = 753.0
+offset_right = 1153.0
+offset_bottom = 80.0
+theme_override_constants/separation = 36
+
+[node name="任务按钮" type="Button" parent="摇杆总节点/按钮总节点/HBoxContainer" unique_id=1560918754]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ve38c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_f4rlh")
+icon = SubResource("AtlasTexture_bjoi3")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="摇杆总节点/按钮总节点/HBoxContainer/任务按钮" unique_id=1224408100]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_5hww4")
+text = "T"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="任务提示" type="Sprite2D" parent="摇杆总节点/按钮总节点/HBoxContainer/任务按钮" unique_id=2117298211]
+visible = false
+position = Vector2(37, 96)
+rotation = 3.1415927
+texture = SubResource("AtlasTexture_22unk")
+
+[node name="任务提示动画机" type="AnimationPlayer" parent="摇杆总节点/按钮总节点/HBoxContainer/任务按钮" unique_id=834643569]
+libraries/ = SubResource("AnimationLibrary_f4rlh")
+
+[node name="背包按钮" type="Button" parent="摇杆总节点/按钮总节点/HBoxContainer" unique_id=47278564]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ve38c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_f4rlh")
+icon = SubResource("AtlasTexture_5hww4")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="摇杆总节点/按钮总节点/HBoxContainer/背包按钮" unique_id=1830398660]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_5hww4")
+text = "B"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="任务提示" type="Sprite2D" parent="摇杆总节点/按钮总节点/HBoxContainer/背包按钮" unique_id=397981401]
+visible = false
+position = Vector2(37, 96)
+rotation = 3.1415927
+texture = SubResource("AtlasTexture_22unk")
+
+[node name="背包提示动画机" type="AnimationPlayer" parent="摇杆总节点/按钮总节点/HBoxContainer/背包按钮" unique_id=289757078]
+libraries/ = SubResource("AnimationLibrary_22unk")
+
+[node name="身份证按钮" type="Button" parent="摇杆总节点/按钮总节点/HBoxContainer" unique_id=771743491]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ve38c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bjoi3")
+icon = SubResource("AtlasTexture_wrden")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="摇杆总节点/按钮总节点/HBoxContainer/身份证按钮" unique_id=490480300]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_5hww4")
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="图鉴按钮" type="Button" parent="摇杆总节点/按钮总节点/HBoxContainer" unique_id=15656606]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ve38c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_22unk")
+icon = SubResource("AtlasTexture_f4rlh")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="摇杆总节点/按钮总节点/HBoxContainer/图鉴按钮" unique_id=617854268]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_5hww4")
+text = "U"
+horizontal_alignment = 1
+vertical_alignment = 1

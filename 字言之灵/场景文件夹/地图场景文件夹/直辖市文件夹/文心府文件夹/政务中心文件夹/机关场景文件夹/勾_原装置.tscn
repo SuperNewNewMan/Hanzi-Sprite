@@ -1,0 +1,608 @@
+[gd_scene format=3 uid="uid://dus6u0rks5c1w"]
+
+[ext_resource type="Texture2D" uid="uid://bla455xuc76q" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/瓦片图片文件夹/政务中心瓦片精灵表.png" id="1_nv726"]
+[ext_resource type="Shader" uid="uid://cricx47vsvg5r" path="res://Shader文件夹/特效Shader/着色器文件夹/像素化消散特效着色器.gdshader" id="1_qgo4m"]
+[ext_resource type="Texture2D" uid="uid://duhcrm0h6hady" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/汉字图片文件夹/g声母/ou韵母/勾_gou_1.png" id="3_c85vn"]
+[ext_resource type="Texture2D" uid="uid://dwreeqt5ysiyy" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/汉字图片文件夹/y声母/uan韵母/原_yuan_2.png" id="4_o2rc4"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q8d1y"]
+frequency = 0.1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8rwge"]
+noise = SubResource("FastNoiseLite_q8d1y")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vdvhv"]
+shader = ExtResource("1_qgo4m")
+shader_parameter/mode = 1
+shader_parameter/progress = 0.0
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+shader_parameter/noise_offset = 0.01
+shader_parameter/grid_size = 60.0
+shader_parameter/edge_power = 28.0
+shader_parameter/PerlinNoise = SubResource("NoiseTexture2D_8rwge")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtq68"]
+atlas = ExtResource("1_nv726")
+region = Rect2(160, 528, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh8gx"]
+atlas = ExtResource("1_nv726")
+region = Rect2(192, 464, 112, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv726"]
+atlas = ExtResource("1_nv726")
+region = Rect2(512, 248, 48, 56)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nv726"]
+radius = 13.038404
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4ylj"]
+atlas = ExtResource("1_nv726")
+region = Rect2(576, 240, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdvhv"]
+atlas = ExtResource("1_nv726")
+region = Rect2(144, 544, 16, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w08ul"]
+atlas = ExtResource("1_nv726")
+region = Rect2(128, 560, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ub6qq"]
+atlas = ExtResource("1_nv726")
+region = Rect2(72, 280, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec8u5"]
+atlas = ExtResource("1_nv726")
+region = Rect2(224, 368, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guaq1"]
+atlas = ExtResource("1_nv726")
+region = Rect2(224, 96, 176, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlafk"]
+atlas = ExtResource("1_nv726")
+region = Rect2(224, 112, 176, 16)
+
+[sub_resource type="Animation" id="Animation_qgo4m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("字灵节点/勾:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("主机械体节点:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("池塘节点:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("主机械体节点/钩子支架/承受梁:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("池塘节点:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("主机械体节点/钩子支架/承受梁:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("塞子节点:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("主机械体节点/钩子支架/承受梁/钩子:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("字灵节点/原:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("主机械体节点/钩子支架/标靶:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("主机械体节点/钩子支架/标靶/监测区域:monitoring")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("主机械体节点/钩子支架/标靶/监测区域:monitorable")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_o2rc4"]
+resource_name = "字灵动画"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("字灵节点/勾:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ub6qq"]
+resource_name = "启用动画"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("主机械体节点:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_y05fs"]
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("字灵节点/原:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4wd2t"]
+resource_name = "原装置启用动画"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("池塘节点:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_sm2wq"]
+resource_name = "勾起塞子动画"
+length = 5.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("主机械体节点/钩子支架/承受梁:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [0.0, 1.5707964]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("塞子节点:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 2),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -42)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("主机械体节点/钩子支架/承受梁/钩子:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [0.0, 2.0943952]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("池塘节点:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_3lapb"]
+resource_name = "源赋能动画"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("池塘节点:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ojlr6"]
+resource_name = "钩赋能动画"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("主机械体节点/钩子支架/承受梁:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("主机械体节点/钩子支架/标靶:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("主机械体节点/钩子支架/标靶/监测区域:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("主机械体节点/钩子支架/标靶/监测区域:monitorable")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qgo4m"]
+_data = {
+&"RESET": SubResource("Animation_qgo4m"),
+&"勾字灵显圣动画": SubResource("Animation_o2rc4"),
+&"勾装置启用动画": SubResource("Animation_ub6qq"),
+&"原字灵显圣动画": SubResource("Animation_y05fs"),
+&"原装置启用动画": SubResource("Animation_4wd2t"),
+&"拔出塞子动画": SubResource("Animation_sm2wq"),
+&"涨赋能动画": SubResource("Animation_3lapb"),
+&"钩赋能动画": SubResource("Animation_ojlr6")
+}
+
+[sub_resource type="Animation" id="Animation_w08ul"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("主机械体节点/钩子支架/标靶/旋转:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vdvhv"]
+resource_name = "提示动画"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("主机械体节点/钩子支架/标靶/旋转:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.141592653589793, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w08ul"]
+_data = {
+&"RESET": SubResource("Animation_w08ul"),
+&"提示动画": SubResource("Animation_vdvhv")
+}
+
+[node name="勾_原装置" type="Node2D" unique_id=1147346802]
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_vdvhv")
+
+[node name="塞子节点" type="Node2D" parent="." unique_id=738002337]
+use_parent_material = true
+
+[node name="塞子" type="Sprite2D" parent="塞子节点" unique_id=1404844359]
+use_parent_material = true
+position = Vector2(17, -4)
+texture = SubResource("AtlasTexture_rtq68")
+offset = Vector2(0, -32)
+
+[node name="主机械体节点" type="Node2D" parent="." unique_id=475393841]
+modulate = Color(1, 1, 1, 0)
+use_parent_material = true
+position = Vector2(12, 0)
+
+[node name="钩子支架" type="Sprite2D" parent="主机械体节点" unique_id=519004066]
+use_parent_material = true
+position = Vector2(0, -9)
+texture = SubResource("AtlasTexture_jh8gx")
+offset = Vector2(0, -115)
+
+[node name="标靶" type="Sprite2D" parent="主机械体节点/钩子支架" unique_id=420331373]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(67, -122)
+rotation = 1.134464
+texture = SubResource("AtlasTexture_nv726")
+
+[node name="监测区域" type="Area2D" parent="主机械体节点/钩子支架/标靶" unique_id=1844934618]
+unique_name_in_owner = true
+position = Vector2(0, -12)
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="主机械体节点/钩子支架/标靶/监测区域" unique_id=669577325]
+shape = SubResource("CircleShape2D_nv726")
+
+[node name="旋转" type="Sprite2D" parent="主机械体节点/钩子支架/标靶" unique_id=1441929310]
+position = Vector2(0.117262125, -12.082483)
+texture = SubResource("AtlasTexture_i4ylj")
+
+[node name="承受梁" type="Sprite2D" parent="主机械体节点/钩子支架" unique_id=1664143659]
+modulate = Color(1, 1, 1, 0)
+use_parent_material = true
+position = Vector2(49, -90)
+texture = SubResource("AtlasTexture_vdvhv")
+offset = Vector2(0, 28)
+
+[node name="钩子" type="Sprite2D" parent="主机械体节点/钩子支架/承受梁" unique_id=1372942013]
+use_parent_material = true
+position = Vector2(0, 53)
+texture = SubResource("AtlasTexture_w08ul")
+offset = Vector2(0, 16)
+
+[node name="承受梁转轴" type="Sprite2D" parent="主机械体节点/钩子支架/承受梁" unique_id=1412611672]
+use_parent_material = true
+position = Vector2(0, 53)
+texture = SubResource("AtlasTexture_ub6qq")
+
+[node name="支架转轴" type="Sprite2D" parent="主机械体节点/钩子支架" unique_id=1611976990]
+use_parent_material = true
+position = Vector2(49, -90)
+texture = SubResource("AtlasTexture_ub6qq")
+
+[node name="基座" type="Sprite2D" parent="主机械体节点" unique_id=1266484601]
+use_parent_material = true
+position = Vector2(-32, -9)
+texture = SubResource("AtlasTexture_ec8u5")
+offset = Vector2(0, -41)
+
+[node name="池塘节点" type="Node2D" parent="." unique_id=483677818]
+modulate = Color(1, 1, 1, 0)
+y_sort_enabled = true
+use_parent_material = true
+position = Vector2(17, -7)
+scale = Vector2(0.8, 0.8)
+
+[node name="上池塘" type="Sprite2D" parent="池塘节点" unique_id=296250963]
+use_parent_material = true
+position = Vector2(0, -14)
+texture = SubResource("AtlasTexture_guaq1")
+offset = Vector2(0, 6)
+
+[node name="下池塘" type="Sprite2D" parent="池塘节点" unique_id=1466192285]
+use_parent_material = true
+position = Vector2(0, 14)
+texture = SubResource("AtlasTexture_tlafk")
+offset = Vector2(0, -6)
+
+[node name="字灵节点" type="Node2D" parent="." unique_id=998418079]
+z_index = 10
+position = Vector2(0, -81)
+
+[node name="勾" type="Sprite2D" parent="字灵节点" unique_id=589501743]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(12, 0)
+texture = ExtResource("3_c85vn")
+
+[node name="原" type="Sprite2D" parent="字灵节点" unique_id=2112296154]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-94, 0)
+texture = ExtResource("4_o2rc4")
+
+[node name="装置动画机" type="AnimationPlayer" parent="." unique_id=1843392036]
+libraries/ = SubResource("AnimationLibrary_qgo4m")
+
+[node name="提示动画机" type="AnimationPlayer" parent="." unique_id=742076638]
+libraries/ = SubResource("AnimationLibrary_w08ul")
+autoplay = &"提示动画"

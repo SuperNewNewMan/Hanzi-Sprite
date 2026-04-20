@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://mqrujlphhxuh"]
+
+[ext_resource type="Script" uid="uid://ikchr3jr0ylh" path="res://脚本文件夹/主场景脚本文件夹/开始界面脚本文件夹/开场引言界面脚本.cs" id="1_gcki7"]
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="2_gcki7"]
+
+[sub_resource type="Animation" id="Animation_gcki7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6okmn"]
+resource_name = "界面渐变动画"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"切换到开始界面的方法"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v6yib"]
+_data = {
+&"RESET": SubResource("Animation_gcki7"),
+&"界面渐变动画": SubResource("Animation_6okmn")
+}
+
+[node name="开场引言界面" type="Control" unique_id=1495257383]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gcki7")
+
+[node name="开场白VBox" type="VBoxContainer" parent="." unique_id=953274196]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="开场白引用标签" type="Label" parent="开场白VBox" unique_id=903857447]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_gcki7")
+theme_override_font_sizes/font_size = 64
+text = "引用"
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="开场白出处标签" type="Label" parent="开场白VBox" unique_id=1464891101]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_gcki7")
+theme_override_font_sizes/font_size = 64
+text = "——出处"
+horizontal_alignment = 2
+autowrap_mode = 3
+
+[node name="开场引言界面动画机" type="AnimationPlayer" parent="." unique_id=920165890]
+libraries/ = SubResource("AnimationLibrary_v6yib")
+autoplay = &"界面渐变动画"

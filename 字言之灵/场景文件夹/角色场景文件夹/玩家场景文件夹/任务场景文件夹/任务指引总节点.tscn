@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dh6gwj8bbm88q"]
+
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="1_eck4f"]
+[ext_resource type="Script" uid="uid://bnwdr1me447vp" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/任务UI脚本文件夹/任务指引总节点脚本.cs" id="1_h114n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h114n"]
+atlas = ExtResource("1_eck4f")
+region = Rect2(138, 154, 12, 12)
+
+[sub_resource type="Gradient" id="Gradient_4ysib"]
+colors = PackedColorArray(1, 0.5882353, 0.6862745, 1, 1, 0.5882353, 0.6862745, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b55gu"]
+gradient = SubResource("Gradient_4ysib")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.4, 0.4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eck4f"]
+atlas = ExtResource("1_eck4f")
+region = Rect2(168, 154, 16, 12)
+
+[sub_resource type="Animation" id="Animation_b55gu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("圆圈精灵:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4ysib"]
+resource_name = "圆圈动画"
+length = 3.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("圆圈精灵:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b55gu"]
+_data = {
+&"RESET": SubResource("Animation_b55gu"),
+&"圆圈动画": SubResource("Animation_4ysib")
+}
+
+[node name="任务指引总节点" type="Node2D" unique_id=1809153731]
+visible = false
+top_level = true
+script = ExtResource("1_h114n")
+
+[node name="圆圈精灵" type="Sprite2D" parent="." unique_id=485624134]
+texture = SubResource("AtlasTexture_h114n")
+
+[node name="PointLight2D" type="PointLight2D" parent="圆圈精灵" unique_id=572301363]
+texture = SubResource("GradientTexture2D_b55gu")
+
+[node name="箭头精灵" type="Sprite2D" parent="." unique_id=1165615315]
+texture = SubResource("AtlasTexture_eck4f")
+
+[node name="任务指引动画机" type="AnimationPlayer" parent="." unique_id=1946579712]
+libraries/ = SubResource("AnimationLibrary_b55gu")

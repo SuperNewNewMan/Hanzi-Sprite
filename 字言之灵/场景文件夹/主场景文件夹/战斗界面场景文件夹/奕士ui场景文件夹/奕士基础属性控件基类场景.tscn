@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://cwyw2yfx3rcq6"]
+
+[ext_resource type="Texture2D" uid="uid://dhdh7e3jck70y" path="res://图片文件夹/主界面图片文件夹/战斗界面图片文件夹/奕士信息UI精灵表.png" id="1_r06eo"]
+[ext_resource type="FontFile" uid="uid://c40jgy7d0n542" path="res://字体文件夹/BoutiqueBitmap9x9_1.92.ttf" id="2_ncm2v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs0t8"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(40, 80, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1gwf"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(64, 80, 128, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1gd3"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(5, 55, 22, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lame"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(1, 1, 190, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g66e"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(2, 130, 188, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jymac"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(43, 59, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c26r"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(33, 33, 158, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu0qj"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(34, 162, 156, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjvki"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(1, 81, 14, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juwi0"]
+atlas = ExtResource("1_r06eo")
+region = Rect2(17, 81, 14, 30)
+
+[node name="奕士基础属性控件" type="MarginContainer" unique_id=1194889380]
+custom_minimum_size = Vector2(340, 54)
+offset_right = 340.0
+offset_bottom = 54.0
+size_flags_horizontal = 3
+
+[node name="奕士信息UIVBox" type="VBoxContainer" parent="." unique_id=1847243612]
+layout_mode = 2
+
+[node name="UI的HBox" type="HBoxContainer" parent="奕士信息UIVBox" unique_id=1579434555]
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="己方提示图片" type="TextureRect" parent="奕士信息UIVBox/UI的HBox" unique_id=417352784]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+texture = SubResource("AtlasTexture_cs0t8")
+
+[node name="信息控件" type="MarginContainer" parent="奕士信息UIVBox/UI的HBox" unique_id=364260421]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="UI背景" type="TextureRect" parent="奕士信息UIVBox/UI的HBox/信息控件" unique_id=89169370]
+self_modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 2
+texture = SubResource("AtlasTexture_f1gwf")
+
+[node name="奕士信息UIHBox" type="HBoxContainer" parent="奕士信息UIVBox/UI的HBox/信息控件" unique_id=556523292]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="血量图标" type="TextureRect" parent="奕士信息UIVBox/UI的HBox/信息控件/奕士信息UIHBox" unique_id=465767654]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_d1gd3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="奕士信息UIVBox/UI的HBox/信息控件/奕士信息UIHBox" unique_id=1972023215]
+layout_mode = 2
+
+[node name="血条" type="TextureProgressBar" parent="奕士信息UIVBox/UI的HBox/信息控件/奕士信息UIHBox/VBoxContainer" unique_id=1326249252]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+value = 100.0
+texture_under = SubResource("AtlasTexture_1lame")
+texture_progress = SubResource("AtlasTexture_0g66e")
+texture_progress_offset = Vector2(1, 1)
+
+[node name="血条数值标签" type="Label" parent="奕士信息UIVBox/UI的HBox/信息控件/奕士信息UIHBox/VBoxContainer/血条" unique_id=2105239044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ncm2v")
+theme_override_font_sizes/font_size = 12
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="灵感HBox" type="HBoxContainer" parent="奕士信息UIVBox/UI的HBox/信息控件/奕士信息UIHBox/VBoxContainer" unique_id=1922321527]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="灵感图标" type="TextureRect" parent="奕士信息UIVBox/UI的HBox/信息控件/奕士信息UIHBox/VBoxContainer/灵感HBox" unique_id=1335049371]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+texture = SubResource("AtlasTexture_jymac")
+
+[node name="灵感条" type="TextureProgressBar" parent="奕士信息UIVBox/UI的HBox/信息控件/奕士信息UIHBox/VBoxContainer/灵感HBox" unique_id=1634545730]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 10.0
+value = 10.0
+texture_under = SubResource("AtlasTexture_5c26r")
+texture_progress = SubResource("AtlasTexture_iu0qj")
+texture_progress_offset = Vector2(1, 1)
+
+[node name="灵感条数值标签" type="Label" parent="奕士信息UIVBox/UI的HBox/信息控件/奕士信息UIHBox/VBoxContainer/灵感HBox/灵感条" unique_id=1039184575]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ncm2v")
+theme_override_font_sizes/font_size = 12
+text = "10/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="显示状态栏按钮" type="TextureButton" parent="奕士信息UIVBox/UI的HBox" unique_id=2055830550]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 54)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_gjvki")
+texture_pressed = SubResource("AtlasTexture_juwi0")
+stretch_mode = 0

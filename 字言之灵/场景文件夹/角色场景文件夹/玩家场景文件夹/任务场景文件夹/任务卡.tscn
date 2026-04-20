@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://cenoc1h2hf34j"]
+
+[ext_resource type="Texture2D" uid="uid://dddcgb2gsyxw5" path="res://图片文件夹/功能型工具图片文件夹/任务UI图片文件夹/任务面板UI精灵表.png" id="1_cekio"]
+[ext_resource type="Script" uid="uid://ch13pd5qtatax" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/任务UI脚本文件夹/任务卡脚本.cs" id="1_ir8j1"]
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="2_ir8j1"]
+[ext_resource type="FontFile" uid="uid://c40jgy7d0n542" path="res://字体文件夹/BoutiqueBitmap9x9_1.92.ttf" id="3_mkpdl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vh3l"]
+atlas = ExtResource("1_cekio")
+region = Rect2(264, 8, 232, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8j1"]
+atlas = ExtResource("1_cekio")
+region = Rect2(416, 80, 64, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnrhr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jraf5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6cbq"]
+atlas = ExtResource("1_cekio")
+region = Rect2(272, 83, 48, 26)
+
+[sub_resource type="FontVariation" id="FontVariation_jraf5"]
+base_font = ExtResource("3_mkpdl")
+spacing_glyph = 4
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2urso"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jraf5"]
+atlas = ExtResource("1_cekio")
+region = Rect2(352, 83, 48, 26)
+
+[node name="任务卡" type="MarginContainer" unique_id=706631299]
+custom_minimum_size = Vector2(348, 84)
+size_flags_horizontal = 4
+mouse_filter = 0
+script = ExtResource("1_ir8j1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=134556584]
+layout_mode = 2
+texture = SubResource("AtlasTexture_8vh3l")
+
+[node name="任务名MC" type="MarginContainer" parent="." unique_id=1952340036]
+custom_minimum_size = Vector2(44, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 4
+
+[node name="任务名标签" type="Label" parent="任务名MC" unique_id=1954678150]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ir8j1")
+theme_override_font_sizes/font_size = 18
+text = "任务名"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=572856818]
+custom_minimum_size = Vector2(280, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="所需物品SC" type="ScrollContainer" parent="HBoxContainer" unique_id=2026851975]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/所需物品SC" unique_id=364978723]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+
+[node name="所需物品槽位HBox" type="HBoxContainer" parent="HBoxContainer/所需物品SC/MarginContainer" unique_id=195836033]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="红箭头图片" type="TextureRect" parent="HBoxContainer" unique_id=2139770251]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_ir8j1")
+
+[node name="奖励物品SC" type="ScrollContainer" parent="HBoxContainer" unique_id=1077158164]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/奖励物品SC" unique_id=155770097]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+
+[node name="奖励物品槽位HBox" type="HBoxContainer" parent="HBoxContainer/奖励物品SC/MarginContainer" unique_id=934474211]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="按钮MC" type="MarginContainer" parent="." unique_id=1219732093]
+custom_minimum_size = Vector2(60, 64)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_right = 4
+
+[node name="追踪按钮" type="Button" parent="按钮MC" unique_id=1772147473]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 29)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jnrhr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jraf5")
+icon = SubResource("AtlasTexture_n6cbq")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="搁置按钮" type="Button" parent="按钮MC" unique_id=1254809125]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 29)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = SubResource("FontVariation_jraf5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jnrhr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2urso")
+icon = SubResource("AtlasTexture_jraf5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="任务描述节点" type="Node2D" parent="." unique_id=1786503823]
+unique_name_in_owner = true
+visible = false
+position = Vector2(256, 52)
+
+[node name="MarginContainer" type="MarginContainer" parent="任务描述节点" unique_id=898784341]
+custom_minimum_size = Vector2(10, 10)
+offset_right = 197.0
+offset_bottom = 231.0
+
+[node name="Panel" type="Panel" parent="任务描述节点/MarginContainer" unique_id=292600385]
+layout_mode = 2
+
+[node name="任务描述标签" type="Label" parent="任务描述节点/MarginContainer" unique_id=551868307]
+unique_name_in_owner = true
+z_index = 1
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_ir8j1")
+theme_override_font_sizes/font_size = 20
+text = "任务描述"
+autowrap_mode = 1

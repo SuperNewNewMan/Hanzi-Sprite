@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bkug4pjnvrouv"
+path="res://.godot/imported/哈希夜鹭_对话_日常.dialogue-d9563a1f4359bf242359a071cc874f76.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/NPC文件夹/哈希夜鹭_对话_日常.dialogue"
+dest_files=["res://.godot/imported/哈希夜鹭_对话_日常.dialogue-d9563a1f4359bf242359a071cc874f76.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,345 @@
+[gd_scene format=3 uid="uid://yc5ga1m0l5ge"]
+
+[ext_resource type="Script" uid="uid://c71j8lfyw5wfk" path="res://脚本文件夹/主场景脚本文件夹/开始界面脚本文件夹/联机画布层脚本.cs" id="1_qhjk1"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="2_stow6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qi0h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oj0u6"]
+atlas = ExtResource("2_stow6")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc7gm"]
+atlas = ExtResource("2_stow6")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njat3"]
+atlas = ExtResource("2_stow6")
+region = Rect2(128, 48, 16, 16)
+
+[node name="联机画布层" type="CanvasLayer" unique_id=2056057852]
+visible = false
+script = ExtResource("1_qhjk1")
+
+[node name="联机界面" type="Panel" parent="." unique_id=388638593]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5qi0h")
+
+[node name="联机方式VBox" type="VBoxContainer" parent="联机界面" unique_id=76724373]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="联机界面/联机方式VBox" unique_id=1427347979]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="联机界面/联机方式VBox/Panel" unique_id=1560083668]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="联机界面/联机方式VBox/Panel/MarginContainer" unique_id=1842074790]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 48
+text = "联机"
+horizontal_alignment = 1
+
+[node name="关闭联机界面按钮" type="Button" parent="联机界面/联机方式VBox/Panel/MarginContainer" unique_id=1788068720]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 40
+icon = SubResource("AtlasTexture_oj0u6")
+icon_alignment = 1
+expand_icon = true
+
+[node name="作为房主按钮" type="Button" parent="联机界面/联机方式VBox" unique_id=190241845]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 48
+text = "·作为房主·"
+
+[node name="作为客人按钮" type="Button" parent="联机界面/联机方式VBox" unique_id=1766417350]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 48
+text = "·作为客人·"
+
+[node name="创建房间面板VBox" type="VBoxContainer" parent="联机界面" unique_id=1782612568]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="联机界面/创建房间面板VBox" unique_id=106381625]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="联机界面/创建房间面板VBox/Panel" unique_id=1169335682]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="创建房间界面标题标签" type="Label" parent="联机界面/创建房间面板VBox/Panel/MarginContainer" unique_id=521099641]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 48
+text = "创建房间"
+horizontal_alignment = 1
+
+[node name="关闭创建房间界面按钮" type="Button" parent="联机界面/创建房间面板VBox/Panel/MarginContainer" unique_id=1293105892]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 40
+icon = SubResource("AtlasTexture_dc7gm")
+icon_alignment = 1
+expand_icon = true
+
+[node name="创建房间参数SC" type="ScrollContainer" parent="联机界面/创建房间面板VBox" unique_id=302661879]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="创建房间参数VBox" type="VBoxContainer" parent="联机界面/创建房间面板VBox/创建房间参数SC" unique_id=1349522677]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="创建房间玩家数HBox" type="HBoxContainer" parent="联机界面/创建房间面板VBox/创建房间参数SC/创建房间参数VBox" unique_id=898503136]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="联机界面/创建房间面板VBox/创建房间参数SC/创建房间参数VBox/创建房间玩家数HBox" unique_id=1744573423]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "允许加入玩家数："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="创建房间玩家数LE" type="LineEdit" parent="联机界面/创建房间面板VBox/创建房间参数SC/创建房间参数VBox/创建房间玩家数HBox" unique_id=511771944]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "8"
+placeholder_text = "请输入1到8之间的数字"
+max_length = 1
+
+[node name="创建房间端口HBox" type="HBoxContainer" parent="联机界面/创建房间面板VBox/创建房间参数SC/创建房间参数VBox" unique_id=203013680]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="联机界面/创建房间面板VBox/创建房间参数SC/创建房间参数VBox/创建房间端口HBox" unique_id=1312674879]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "房间端口："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="创建房间端口LE" type="LineEdit" parent="联机界面/创建房间面板VBox/创建房间参数SC/创建房间参数VBox/创建房间端口HBox" unique_id=1744312656]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "7777"
+placeholder_text = "请输入1024到49151之间的数字"
+max_length = 5
+
+[node name="创建房间按钮" type="Button" parent="联机界面/创建房间面板VBox" unique_id=1764558346]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+text = "创建房间"
+
+[node name="加入房间面板VBox" type="VBoxContainer" parent="联机界面" unique_id=1829619632]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="联机界面/加入房间面板VBox" unique_id=1172845669]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="联机界面/加入房间面板VBox/Panel" unique_id=264432963]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="加入房间界面标题标签" type="Label" parent="联机界面/加入房间面板VBox/Panel/MarginContainer" unique_id=1771733377]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 48
+text = "加入房间"
+horizontal_alignment = 1
+
+[node name="关闭加入房间界面按钮" type="Button" parent="联机界面/加入房间面板VBox/Panel/MarginContainer" unique_id=950569591]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 40
+icon = SubResource("AtlasTexture_njat3")
+icon_alignment = 1
+expand_icon = true
+
+[node name="加入房间参数SC" type="ScrollContainer" parent="联机界面/加入房间面板VBox" unique_id=1963371520]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="加入房间参数VBox" type="VBoxContainer" parent="联机界面/加入房间面板VBox/加入房间参数SC" unique_id=1735303500]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="加入房间IP地址HBox" type="HBoxContainer" parent="联机界面/加入房间面板VBox/加入房间参数SC/加入房间参数VBox" unique_id=139375858]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="联机界面/加入房间面板VBox/加入房间参数SC/加入房间参数VBox/加入房间IP地址HBox" unique_id=1686936055]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Ip地址："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="加入房间IP地址LE" type="LineEdit" parent="联机界面/加入房间面板VBox/加入房间参数SC/加入房间参数VBox/加入房间IP地址HBox" unique_id=1647284232]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+placeholder_text = "（选填项。如果不填则会自动获取IP地址）"
+max_length = 15
+
+[node name="加入房间端口HBox" type="HBoxContainer" parent="联机界面/加入房间面板VBox/加入房间参数SC/加入房间参数VBox" unique_id=1840365742]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="联机界面/加入房间面板VBox/加入房间参数SC/加入房间参数VBox/加入房间端口HBox" unique_id=331443789]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "房间端口："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="加入房间端口LE" type="LineEdit" parent="联机界面/加入房间面板VBox/加入房间参数SC/加入房间参数VBox/加入房间端口HBox" unique_id=188877542]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "7777"
+placeholder_text = "请输入1024到49151之间的数字"
+max_length = 5
+
+[node name="加入房间按钮" type="Button" parent="联机界面/加入房间面板VBox" unique_id=2026249174]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+text = "加入房间"
+
+[node name="选择方式面板VBox" type="VBoxContainer" parent="联机界面" unique_id=2096780286]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="联机界面/选择方式面板VBox" unique_id=347876676]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="联机界面/选择方式面板VBox/Panel" unique_id=170094121]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="联机界面/选择方式面板VBox/Panel/MarginContainer" unique_id=1010538645]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 48
+text = "选择进行联机游戏的方式"
+horizontal_alignment = 1
+
+[node name="关闭选择方式界面按钮" type="Button" parent="联机界面/选择方式面板VBox/Panel/MarginContainer" unique_id=805246319]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 40
+icon = SubResource("AtlasTexture_oj0u6")
+icon_alignment = 1
+expand_icon = true
+
+[node name="创建角色按钮" type="Button" parent="联机界面/选择方式面板VBox" unique_id=1928111832]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 48
+text = "创建角色"
+
+[node name="加载存档按钮" type="Button" parent="联机界面/选择方式面板VBox" unique_id=1416094611]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 48
+text = "加载存档"

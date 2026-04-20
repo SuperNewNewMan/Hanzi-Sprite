@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dwg6w6llw1kfl"]
+
+[ext_resource type="Script" uid="uid://bajmua1rl71xu" path="res://脚本文件夹/地图脚本文件夹脚本/可交互体脚本文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/子弹文件夹/子弹脚本.cs" id="1_4nlk6"]
+[ext_resource type="Texture2D" uid="uid://bvdsax34i7pxb" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/瓦片图片文件夹/政务中心瓦片精灵表2.png" id="2_4nlk6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nlk6"]
+atlas = ExtResource("2_4nlk6")
+region = Rect2(0, 0, 144, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nlk6"]
+size = Vector2(144, 2)
+
+[node name="弓箭" type="Node2D" unique_id=1371849126]
+z_index = 10
+script = ExtResource("1_4nlk6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=88426841]
+texture = SubResource("AtlasTexture_4nlk6")
+
+[node name="销毁计时器" type="Timer" parent="." unique_id=1344020823]
+wait_time = 4.0
+
+[node name="监测区域" type="Area2D" parent="." unique_id=1460768516 groups=["子弹组"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="监测区域" unique_id=1757179864]
+shape = SubResource("RectangleShape2D_4nlk6")

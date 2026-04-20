@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Godot\\\u9879\u76EE\u6587\u4EF6\u5939\\\u5B57\u8A00\u4E4B\u7075\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A43018-1590-4376-A3F3-28E1A9605F76}|\u5B57\u8A00\u4E4B\u7075.csproj|e:\\godot\\\u9879\u76EE\u6587\u4EF6\u5939\\\u5B57\u8A00\u4E4B\u7075\\\u811A\u672C\u6587\u4EF6\u5939\\\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A43018-1590-4376-A3F3-28E1A9605F76}|\u5B57\u8A00\u4E4B\u7075.csproj|solutionrelative:\u811A\u672C\u6587\u4EF6\u5939\\\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4A43018-1590-4376-A3F3-28E1A9605F76}|\u5B57\u8A00\u4E4B\u7075.csproj|e:\\godot\\\u9879\u76EE\u6587\u4EF6\u5939\\\u5B57\u8A00\u4E4B\u7075\\\u811A\u672C\u6587\u4EF6\u5939\\\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u4EBA\u7269\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u7C7B\u811A\u672C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A43018-1590-4376-A3F3-28E1A9605F76}|\u5B57\u8A00\u4E4B\u7075.csproj|solutionrelative:\u811A\u672C\u6587\u4EF6\u5939\\\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u4EBA\u7269\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u7C7B\u811A\u672C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "\u73A9\u5BB6\u6570\u636E\u7C7B\u811A\u672C.cs",
+              "DocumentMoniker": "E:\\Godot\\\u9879\u76EE\u6587\u4EF6\u5939\\\u5B57\u8A00\u4E4B\u7075\\\u811A\u672C\u6587\u4EF6\u5939\\\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u4EBA\u7269\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u7C7B\u811A\u672C.cs",
+              "RelativeDocumentMoniker": "\u811A\u672C\u6587\u4EF6\u5939\\\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u4EBA\u7269\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u7C7B\u811A\u672C.cs",
+              "ToolTip": "E:\\Godot\\\u9879\u76EE\u6587\u4EF6\u5939\\\u5B57\u8A00\u4E4B\u7075\\\u811A\u672C\u6587\u4EF6\u5939\\\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u4EBA\u7269\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u7C7B\u811A\u672C.cs",
+              "RelativeToolTip": "\u811A\u672C\u6587\u4EF6\u5939\\\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u4EBA\u7269\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u7C7B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u7C7B\u811A\u672C.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:57:54.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C.cs",
+              "DocumentMoniker": "E:\\Godot\\\u9879\u76EE\u6587\u4EF6\u5939\\\u5B57\u8A00\u4E4B\u7075\\\u811A\u672C\u6587\u4EF6\u5939\\\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C.cs",
+              "RelativeDocumentMoniker": "\u811A\u672C\u6587\u4EF6\u5939\\\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C.cs",
+              "ToolTip": "E:\\Godot\\\u9879\u76EE\u6587\u4EF6\u5939\\\u5B57\u8A00\u4E4B\u7075\\\u811A\u672C\u6587\u4EF6\u5939\\\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C.cs",
+              "RelativeToolTip": "\u811A\u672C\u6587\u4EF6\u5939\\\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C\u6587\u4EF6\u5939\\\u73A9\u5BB6\u6570\u636E\u5355\u4F8B\u811A\u672C.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T04:15:15.749Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

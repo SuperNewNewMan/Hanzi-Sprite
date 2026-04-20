@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c620we7goe055"
+path="res://.godot/imported/八卦编钟装置教程_白天.dialogue-a8336f8de88d1e8d255f1fa251f74441.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/设施文件夹/八卦编钟装置教程_白天.dialogue"
+dest_files=["res://.godot/imported/八卦编钟装置教程_白天.dialogue-a8336f8de88d1e8d255f1fa251f74441.tres"]
+
+[params]
+
+defaults=true

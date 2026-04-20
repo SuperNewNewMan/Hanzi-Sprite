@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bclov78duwaha"]
+
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="1_e3qgb"]
+[ext_resource type="Texture2D" uid="uid://byn6mlr0dauyw" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/八卦编钟图片文件夹/八卦编钟精灵表.png" id="1_tjld7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aweba"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fbtmm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo7nd"]
+atlas = ExtResource("1_tjld7")
+region = Rect2(64, 64, 32, 32)
+
+[node name="字灵按钮" type="Button" unique_id=7678180]
+custom_minimum_size = Vector2(80, 80)
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_e3qgb")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aweba")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_wo7nd")
+flat = true
+icon_alignment = 1
+expand_icon = true

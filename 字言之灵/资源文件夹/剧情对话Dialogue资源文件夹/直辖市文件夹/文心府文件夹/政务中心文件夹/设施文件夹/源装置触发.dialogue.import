@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c8rprxoecweei"
+path="res://.godot/imported/源装置触发.dialogue-708855e5df80d955fda31c059c0ce468.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/设施文件夹/源装置触发.dialogue"
+dest_files=["res://.godot/imported/源装置触发.dialogue-708855e5df80d955fda31c059c0ce468.tres"]
+
+[params]
+
+defaults=true

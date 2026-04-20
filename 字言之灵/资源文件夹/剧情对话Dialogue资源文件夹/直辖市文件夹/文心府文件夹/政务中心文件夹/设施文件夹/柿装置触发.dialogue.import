@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://l722gboqx74l"
+path="res://.godot/imported/柿装置触发.dialogue-00db3067f9311ff4876596e0d73a984b.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/设施文件夹/柿装置触发.dialogue"
+dest_files=["res://.godot/imported/柿装置触发.dialogue-00db3067f9311ff4876596e0d73a984b.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cdsx1t7v6awtu"
+path="res://.godot/imported/琥珀阿比猫_对话_意义封神_张.dialogue-c851c5ef7bfab6b2ff9e77dc37abc59f.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/NPC文件夹/意义封神文件夹/琥珀阿比猫_对话_意义封神_张.dialogue"
+dest_files=["res://.godot/imported/琥珀阿比猫_对话_意义封神_张.dialogue-c851c5ef7bfab6b2ff9e77dc37abc59f.tres"]
+
+[params]
+
+defaults=true

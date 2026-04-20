@@ -1,0 +1,615 @@
+[gd_scene format=3 uid="uid://cp6osrs1yjiau"]
+
+[ext_resource type="Texture2D" uid="uid://bmjn3swva0usb" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_液晶屏图片.png" id="1_rsil7"]
+[ext_resource type="Script" uid="uid://mfric043kyk1" path="res://脚本文件夹/地图脚本文件夹脚本/可交互体脚本文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/面板型可交互体文件夹/自助办理机面板画布层脚本.cs" id="1_w7vs5"]
+[ext_resource type="Texture2D" uid="uid://8qg0u8sh6mp1" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_机器图片.png" id="1_xenw4"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="2_2f03g"]
+[ext_resource type="Texture2D" uid="uid://c5dat4fre200n" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_取号口按钮图片.png" id="2_jwk8o"]
+[ext_resource type="Texture2D" uid="uid://gtgfs2rq2nd0" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_办理身份证按钮图片.png" id="2_pw5bv"]
+[ext_resource type="Texture2D" uid="uid://crtt0gp4rcsmr" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_证件口按钮图片.png" id="3_bgfii"]
+[ext_resource type="Texture2D" uid="uid://c7hpo2ks6gfeg" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_办理字灵证按钮图片.png" id="3_o0wka"]
+[ext_resource type="Texture2D" uid="uid://cpsnxee2x4uru" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_复印件提交口按钮图片.png" id="4_t2swm"]
+[ext_resource type="Texture2D" uid="uid://8jax5rj842f" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_手掌按钮图片.png" id="5_3cq8d"]
+[ext_resource type="Texture2D" uid="uid://cg6jbpuyrtq04" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_办理身份证界面图片.png" id="5_w5663"]
+[ext_resource type="Texture2D" uid="uid://ehs8c63b6jl" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_身份证按钮图片.png" id="6_7ovd3"]
+[ext_resource type="Texture2D" uid="uid://chb37qng3fowr" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_手机按钮图片.png" id="6_aychx"]
+[ext_resource type="Texture2D" uid="uid://blmbo4gyaaani" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_办理按钮图片.png" id="7_rtr5n"]
+[ext_resource type="FontFile" uid="uid://c40jgy7d0n542" path="res://字体文件夹/BoutiqueBitmap9x9_1.92.ttf" id="8_7ovd3"]
+[ext_resource type="Texture2D" uid="uid://b051ro8cnnbs7" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_返回按钮图片.png" id="8_nnpb8"]
+[ext_resource type="Texture2D" uid="uid://bycg4d40a0vfs" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_绿对勾图片.png" id="8_xjy8n"]
+[ext_resource type="Texture2D" uid="uid://ovkwn0wxhf2h" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_办理字灵证界面图片.png" id="9_mbc14"]
+[ext_resource type="Texture2D" uid="uid://iblw66jsdqky" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_提交面板图片.png" id="18_yhri4"]
+[ext_resource type="PackedScene" uid="uid://p4xtwbeogays" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/背包场景文件夹/槽位.tscn" id="19_5s3sp"]
+[ext_resource type="Texture2D" uid="uid://d33jvk5dmn38o" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_提交按钮图片.png" id="19_wpruu"]
+[ext_resource type="Texture2D" uid="uid://dn81tf5sst1ui" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/自助办理机图片文件夹/自助办理机_关闭按钮图片.png" id="20_gi1uo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3cq8d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6axm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1clj5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_acp4a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ygbme"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bxo4g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2shw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vr8ii"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnma3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w5663"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aychx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rtr5n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ovd3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nnpb8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbc14"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pw5bv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w7vs5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhri4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o0wka"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rsil7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wpruu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gi1uo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5s3sp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjy8n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwk8o"]
+atlas = ExtResource("2_2f03g")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cq8d"]
+atlas = ExtResource("2_2f03g")
+region = Rect2(64, 144, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ovd3"]
+atlas = ExtResource("2_2f03g")
+region = Rect2(100, 101, 41, 23)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_quigx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_al0xv"]
+
+[sub_resource type="Animation" id="Animation_7ovd3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("证件口提示精灵:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("证件口提示精灵:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(247, 525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("提交面板节点:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 140)]
+}
+
+[sub_resource type="Animation" id="Animation_yhri4"]
+resource_name = "提示面板动画"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("提交面板节点:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(2.5, 2.5),
+"update": 0,
+"values": [Vector2(1152, 140), Vector2(862, 140)]
+}
+
+[sub_resource type="Animation" id="Animation_pw5bv"]
+resource_name = "证件口提示动画"
+length = 1.2
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("证件口提示精灵:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("证件口提示精灵:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(247, 525), Vector2(247, 537)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o0wka"]
+_data = {
+&"RESET": SubResource("Animation_7ovd3"),
+&"提交面板动画": SubResource("Animation_yhri4"),
+&"证件口提示动画": SubResource("Animation_pw5bv")
+}
+
+[node name="自助办理机面板" type="CanvasLayer" unique_id=1473452202]
+layer = 2
+script = ExtResource("1_w7vs5")
+
+[node name="自助办理机总控件" type="Control" parent="." unique_id=50631044]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="液晶屏图片" type="TextureRect" parent="自助办理机总控件" unique_id=192522329]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rsil7")
+
+[node name="MarginContainer" type="MarginContainer" parent="自助办理机总控件" unique_id=385840964]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="自助办理机背景" type="TextureRect" parent="自助办理机总控件/MarginContainer" unique_id=1820271060]
+layout_mode = 2
+texture = ExtResource("1_xenw4")
+
+[node name="操作面板总MC" type="MarginContainer" parent="自助办理机总控件/MarginContainer" unique_id=1276709724]
+layout_mode = 2
+
+[node name="开始面板MC" type="MarginContainer" parent="自助办理机总控件/MarginContainer/操作面板总MC" unique_id=345322549]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 528)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 140
+theme_override_constants/margin_right = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="自助办理机总控件/MarginContainer/操作面板总MC/开始面板MC" unique_id=752051866]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="进入身份证面板按钮" type="Button" parent="自助办理机总控件/MarginContainer/操作面板总MC/开始面板MC/VBoxContainer" unique_id=1636595645]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(272, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3cq8d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_w6axm")
+icon = ExtResource("2_pw5bv")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="进入字灵证面板按钮" type="Button" parent="自助办理机总控件/MarginContainer/操作面板总MC/开始面板MC/VBoxContainer" unique_id=1169126778]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(272, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3cq8d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1clj5")
+disabled = true
+icon = ExtResource("3_o0wka")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="办理身份证面板MC" type="MarginContainer" parent="自助办理机总控件/MarginContainer/操作面板总MC" unique_id=63865284]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="办理身份证面板背景" type="TextureRect" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC" unique_id=103969724]
+layout_mode = 2
+texture = ExtResource("5_w5663")
+
+[node name="手机节点" type="Node2D" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC" unique_id=357738820]
+position = Vector2(184, 157)
+
+[node name="手机按钮" type="Button" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC/手机节点" unique_id=343245800]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(182, 274)
+offset_right = 182.0
+offset_bottom = 274.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_acp4a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ygbme")
+icon = ExtResource("6_aychx")
+flat = true
+expand_icon = true
+
+[node name="完成显示节点" type="Node2D" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC" unique_id=1010904806]
+
+[node name="照片已提交图片" type="TextureRect" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC/完成显示节点" unique_id=928233916]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(138, 128)
+offset_left = 206.0
+offset_top = 246.0
+offset_right = 344.0
+offset_bottom = 374.0
+texture = ExtResource("8_xjy8n")
+
+[node name="户口复印件已提交图片" type="TextureRect" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC/完成显示节点" unique_id=1002274837]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(138, 128)
+offset_left = 628.0
+offset_top = 246.0
+offset_right = 766.0
+offset_bottom = 374.0
+texture = ExtResource("8_xjy8n")
+
+[node name="MarginContainer" type="MarginContainer" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC" unique_id=1547758217]
+custom_minimum_size = Vector2(300, 360)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC/MarginContainer" unique_id=1958770227]
+layout_mode = 2
+
+[node name="办理身份证按钮" type="Button" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC/MarginContainer/VBoxContainer" unique_id=1090239442]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(236, 78)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_acp4a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bxo4g")
+icon = ExtResource("7_rtr5n")
+flat = true
+expand_icon = true
+
+[node name="身份证面板返回按钮" type="Button" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理身份证面板MC/MarginContainer/VBoxContainer" unique_id=1526563208]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(236, 78)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_acp4a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u2shw")
+icon = ExtResource("8_nnpb8")
+flat = true
+expand_icon = true
+
+[node name="办理字灵证面板MC" type="MarginContainer" parent="自助办理机总控件/MarginContainer/操作面板总MC" unique_id=512060180]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="办理身份证面板背景" type="TextureRect" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理字灵证面板MC" unique_id=1644739285]
+layout_mode = 2
+texture = ExtResource("9_mbc14")
+
+[node name="完成显示节点" type="Node2D" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理字灵证面板MC" unique_id=2049931833]
+
+[node name="手掌已按下图片" type="TextureRect" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理字灵证面板MC/完成显示节点" unique_id=1561953011]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(138, 128)
+offset_left = 206.0
+offset_top = 246.0
+offset_right = 344.0
+offset_bottom = 374.0
+texture = ExtResource("8_xjy8n")
+
+[node name="身份证已刷图片" type="TextureRect" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理字灵证面板MC/完成显示节点" unique_id=1180272135]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(138, 128)
+offset_left = 628.0
+offset_top = 246.0
+offset_right = 766.0
+offset_bottom = 374.0
+texture = ExtResource("8_xjy8n")
+
+[node name="MarginContainer" type="MarginContainer" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理字灵证面板MC" unique_id=1432217999]
+custom_minimum_size = Vector2(300, 360)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理字灵证面板MC/MarginContainer" unique_id=84745288]
+layout_mode = 2
+
+[node name="办理字灵证按钮" type="Button" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理字灵证面板MC/MarginContainer/VBoxContainer" unique_id=2048657188]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(236, 78)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_acp4a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vr8ii")
+icon = ExtResource("7_rtr5n")
+flat = true
+expand_icon = true
+
+[node name="字灵证面板返回按钮" type="Button" parent="自助办理机总控件/MarginContainer/操作面板总MC/办理字灵证面板MC/MarginContainer/VBoxContainer" unique_id=740849801]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(236, 78)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_acp4a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cnma3")
+icon = ExtResource("8_nnpb8")
+flat = true
+expand_icon = true
+
+[node name="底部按钮MC" type="MarginContainer" parent="自助办理机总控件/MarginContainer" unique_id=456413425]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_right = 24
+
+[node name="HBoxContainer" type="HBoxContainer" parent="自助办理机总控件/MarginContainer/底部按钮MC" unique_id=1520587264]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="HBoxContainer" type="HBoxContainer" parent="自助办理机总控件/MarginContainer/底部按钮MC/HBoxContainer" unique_id=983541160]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="取号口按钮" type="Button" parent="自助办理机总控件/MarginContainer/底部按钮MC/HBoxContainer/HBoxContainer" unique_id=1325194413]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(124, 46)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w5663")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_aychx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rtr5n")
+icon = ExtResource("2_jwk8o")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="证件口按钮" type="Button" parent="自助办理机总控件/MarginContainer/底部按钮MC/HBoxContainer/HBoxContainer" unique_id=2030616345]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(124, 46)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7ovd3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nnpb8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mbc14")
+icon = ExtResource("3_bgfii")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="复印件提交口按钮" type="Button" parent="自助办理机总控件/MarginContainer/底部按钮MC/HBoxContainer/HBoxContainer" unique_id=1772297606]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(328, 54)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pw5bv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w7vs5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yhri4")
+icon = ExtResource("4_t2swm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="自助办理机总控件/MarginContainer/底部按钮MC/HBoxContainer" unique_id=1341929563]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="手掌按钮" type="Button" parent="自助办理机总控件/MarginContainer/底部按钮MC/HBoxContainer/HBoxContainer2" unique_id=1685642153]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(106, 96)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o0wka")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rsil7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wpruu")
+icon = ExtResource("5_3cq8d")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="身份证按钮" type="Button" parent="自助办理机总控件/MarginContainer/底部按钮MC/HBoxContainer/HBoxContainer2" unique_id=2736570]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(242, 96)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gi1uo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5s3sp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xjy8n")
+icon = ExtResource("6_7ovd3")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="关闭面板按钮" type="Button" parent="自助办理机总控件" unique_id=1840660410]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -51.0
+offset_bottom = 51.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_jwk8o")
+expand_icon = true
+
+[node name="取号口提示精灵" type="Sprite2D" parent="." unique_id=1858089799]
+visible = false
+z_index = 2
+position = Vector2(86, 525)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_3cq8d")
+
+[node name="Label" type="Label" parent="取号口提示精灵" unique_id=362500068]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -40.0
+offset_right = -2.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("8_7ovd3")
+text = "01"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="证件口提示精灵" type="Sprite2D" parent="." unique_id=510019890]
+visible = false
+z_index = 2
+position = Vector2(247, 525)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_3cq8d")
+
+[node name="Sprite2D" type="Sprite2D" parent="证件口提示精灵" unique_id=91262736]
+position = Vector2(0, -5.5)
+texture = SubResource("AtlasTexture_7ovd3")
+
+[node name="提交面板节点" type="Node2D" parent="." unique_id=786239506]
+z_index = 2
+position = Vector2(1152, 140)
+
+[node name="MarginContainer" type="MarginContainer" parent="提交面板节点" unique_id=946136786]
+offset_right = 282.0
+offset_bottom = 420.0
+
+[node name="提交面板背景" type="TextureRect" parent="提交面板节点/MarginContainer" unique_id=1855378963]
+layout_mode = 2
+texture = ExtResource("18_yhri4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="提交面板节点/MarginContainer" unique_id=8307429]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="提交面板节点/MarginContainer/VBoxContainer" unique_id=1735178871]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+
+[node name="GridContainer" type="GridContainer" parent="提交面板节点/MarginContainer/VBoxContainer/MarginContainer" unique_id=1165504663]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+columns = 2
+
+[node name="自助办理机槽位" parent="提交面板节点/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1993592146 instance=ExtResource("19_5s3sp")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(84, 84)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="提交面板节点/MarginContainer/VBoxContainer" unique_id=1867569996]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="提交面板节点/MarginContainer/VBoxContainer/MarginContainer2" unique_id=1636491511]
+layout_mode = 2
+
+[node name="提交物品按钮" type="Button" parent="提交面板节点/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1774159188]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(102, 48)
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_quigx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_al0xv")
+icon = ExtResource("19_wpruu")
+flat = true
+expand_icon = true
+
+[node name="关闭提交面板按钮" type="Button" parent="提交面板节点/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=2136179407]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(102, 48)
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_quigx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_al0xv")
+icon = ExtResource("20_gi1uo")
+flat = true
+expand_icon = true
+
+[node name="自助办理机动画机" type="AnimationPlayer" parent="." unique_id=1646228400]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_o0wka")

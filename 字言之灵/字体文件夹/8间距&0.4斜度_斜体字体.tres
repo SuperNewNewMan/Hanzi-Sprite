@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://7wfsd7c33dn0"]
+
+[ext_resource type="FontFile" uid="uid://c40jgy7d0n542" path="res://字体文件夹/BoutiqueBitmap9x9_1.92.ttf" id="1_43jtg"]
+
+[resource]
+base_font = ExtResource("1_43jtg")
+variation_transform = Transform2D(1, 0.4, 0, 1, 0, 0)
+spacing_glyph = 8

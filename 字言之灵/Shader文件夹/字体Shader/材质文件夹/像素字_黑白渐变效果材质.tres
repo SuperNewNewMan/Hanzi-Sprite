@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dasm4peqqs62b"]
+
+[ext_resource type="Shader" uid="uid://tra4x8t1ocha" path="res://Shader文件夹/字体Shader/着色器文件夹/像素字_黑白渐变效果着色器.gdshader" id="1_x28vu"]
+
+[resource]
+shader = ExtResource("1_x28vu")
+shader_parameter/outline_size = 2.0
+shader_parameter/cutoff = 0.5
+shader_parameter/time_speed = 1.0
+shader_parameter/color_a = Color(1, 1, 1, 1)
+shader_parameter/color_b = Color(0, 0, 0, 1)

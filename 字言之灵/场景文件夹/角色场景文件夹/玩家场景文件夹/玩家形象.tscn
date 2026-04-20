@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bc15s2ld6exdh"]
+
+[ext_resource type="Texture2D" uid="uid://0pv6ja8s7h7g" path="res://图片文件夹/玩家图片文件夹/人物模型图片文件夹/玩家精灵表.png" id="1_fj6od"]
+[ext_resource type="Texture2D" uid="uid://cevnaw57xfm5f" path="res://图片文件夹/玩家图片文件夹/上衣图片文件夹/不穿衣服.png" id="2_stxri"]
+[ext_resource type="Texture2D" uid="uid://csxholaot7dwe" path="res://图片文件夹/玩家图片文件夹/影子图片文件夹/影子.png" id="4_du01w"]
+[ext_resource type="Texture2D" uid="uid://txte2nluhid8" path="res://图片文件夹/玩家图片文件夹/尾巴图片文件夹/光秃秃的尾巴.png" id="8_stxri"]
+
+[node name="玩家形象" type="CharacterBody2D" unique_id=1370751512 groups=["玩家组"]]
+
+[node name="图片总节点" type="Node2D" parent="." unique_id=1456941478]
+position = Vector2(0, -24)
+
+[node name="影子精灵" type="Sprite2D" parent="图片总节点" unique_id=578505370]
+texture = ExtResource("4_du01w")
+
+[node name="人物身体精灵" type="Sprite2D" parent="图片总节点" unique_id=1494373308]
+texture = ExtResource("1_fj6od")
+hframes = 6
+vframes = 5
+
+[node name="上衣精灵" type="Sprite2D" parent="图片总节点" unique_id=1732988102]
+texture = ExtResource("2_stxri")
+hframes = 5
+vframes = 5
+
+[node name="裤子精灵" type="Sprite2D" parent="图片总节点" unique_id=236639096]
+hframes = 4
+vframes = 4
+
+[node name="鞋子精灵" type="Sprite2D" parent="图片总节点" unique_id=28374631]
+hframes = 5
+vframes = 4
+
+[node name="帽子精灵" type="Sprite2D" parent="图片总节点" unique_id=1813242901]
+visible = false
+hframes = 15
+
+[node name="胡须精灵" type="Sprite2D" parent="图片总节点" unique_id=1010659387]
+visible = false
+hframes = 15
+
+[node name="眼镜精灵" type="Sprite2D" parent="图片总节点" unique_id=1235899640]
+visible = false
+hframes = 15
+
+[node name="尾巴精灵" type="Sprite2D" parent="图片总节点" unique_id=2099418953]
+texture = ExtResource("8_stxri")
+hframes = 4
+vframes = 4

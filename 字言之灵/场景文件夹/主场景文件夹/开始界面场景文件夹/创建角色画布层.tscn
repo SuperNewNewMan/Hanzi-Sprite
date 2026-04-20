@@ -1,0 +1,454 @@
+[gd_scene format=3 uid="uid://53hchgp33qx"]
+
+[ext_resource type="PackedScene" uid="uid://bc15s2ld6exdh" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/玩家形象.tscn" id="1_8hw7t"]
+[ext_resource type="Script" uid="uid://c11ta7qmgntbe" path="res://脚本文件夹/主场景脚本文件夹/开始界面脚本文件夹/创建角色画布层文件夹.cs" id="1_nlptp"]
+
+[node name="创建角色画布层" type="CanvasLayer" unique_id=303597371]
+script = ExtResource("1_nlptp")
+
+[node name="创建角色界面" type="Control" parent="." unique_id=1867939194]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="创建角色界面" unique_id=2021085306]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="创建角色界面VBox" type="VBoxContainer" parent="创建角色界面" unique_id=479231782]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="创建角色界面/创建角色界面VBox" unique_id=459794880]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "创建一个角色！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="编辑面板总HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox" unique_id=777816798]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="人物信息编辑面板VBox" type="VBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox" unique_id=86586048]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="人物形象MC" type="MarginContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/人物信息编辑面板VBox" unique_id=105687194]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="玩家形象" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/人物信息编辑面板VBox/人物形象MC" unique_id=367110856 instance=ExtResource("1_8hw7t")]
+position = Vector2(215, 128)
+
+[node name="图片总节点" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/人物信息编辑面板VBox/人物形象MC/玩家形象" index="0" unique_id=1456941478]
+scale = Vector2(8, 8)
+
+[node name="人物名TE" type="TextEdit" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/人物信息编辑面板VBox" unique_id=153820408]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+placeholder_text = "请输入你的名字！（只准输入中文、英文或者数字哦）"
+wrap_mode = 1
+
+[node name="人物名文本长度标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/人物信息编辑面板VBox/人物名TE" unique_id=104912122]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -28.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0/16"
+
+[node name="装饰编辑面板SC" type="ScrollContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox" unique_id=1897766387]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="装饰编辑面板VBox" type="VBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC" unique_id=915437535]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="上衣" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox" unique_id=98800833]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/上衣" unique_id=244171082]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "上衣"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="样式HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/上衣" unique_id=233007936]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="上衣_名标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/上衣/样式HBox" unique_id=821166442]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "白色衬衫"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="左右更衣HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/上衣/样式HBox" unique_id=277461829]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="上衣_左更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/上衣/样式HBox/左右更衣HBox" unique_id=1764384631]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "←"
+
+[node name="上衣_样式值标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/上衣/样式HBox/左右更衣HBox" unique_id=496915267]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="上衣_右更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/上衣/样式HBox/左右更衣HBox" unique_id=1090482181]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "→"
+
+[node name="裤子" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox" unique_id=422920867]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/裤子" unique_id=1523886517]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "裤子"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="样式HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/裤子" unique_id=1324423402]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="裤子_名标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/裤子/样式HBox" unique_id=936943006]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "藏蓝色运动裤"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="左右更衣HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/裤子/样式HBox" unique_id=1467624040]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="裤子_左更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/裤子/样式HBox/左右更衣HBox" unique_id=1508775724]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "←"
+
+[node name="裤子_样式值标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/裤子/样式HBox/左右更衣HBox" unique_id=1519834115]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="裤子_右更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/裤子/样式HBox/左右更衣HBox" unique_id=1755423131]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "→"
+
+[node name="鞋子" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox" unique_id=349606880]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/鞋子" unique_id=2080342540]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "鞋子"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="样式HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/鞋子" unique_id=107680202]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="鞋子_名标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/鞋子/样式HBox" unique_id=2078902509]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "红白色运动鞋"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="左右更衣HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/鞋子/样式HBox" unique_id=1408017896]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="鞋子_左更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/鞋子/样式HBox/左右更衣HBox" unique_id=1874209824]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "←"
+
+[node name="鞋子_样式值标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/鞋子/样式HBox/左右更衣HBox" unique_id=528803181]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="鞋子_右更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/鞋子/样式HBox/左右更衣HBox" unique_id=1126264540]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "→"
+
+[node name="帽子" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox" unique_id=1102599621]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/帽子" unique_id=1893740337]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "帽子"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="样式HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/帽子" unique_id=1190907276]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="帽子_名标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/帽子/样式HBox" unique_id=194018044]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "不戴帽子"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="左右更衣HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/帽子/样式HBox" unique_id=2109635140]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="帽子_左更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/帽子/样式HBox/左右更衣HBox" unique_id=1401444129]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "←"
+
+[node name="帽子_样式值标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/帽子/样式HBox/左右更衣HBox" unique_id=1889025129]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="帽子_右更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/帽子/样式HBox/左右更衣HBox" unique_id=674561226]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "→"
+
+[node name="胡须" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox" unique_id=1627914292]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/胡须" unique_id=261400606]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "胡须"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="样式HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/胡须" unique_id=2047422854]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="胡须_名标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/胡须/样式HBox" unique_id=1268386460]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "没有胡子"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="左右更衣HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/胡须/样式HBox" unique_id=375250534]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="胡须_左更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/胡须/样式HBox/左右更衣HBox" unique_id=1397514333]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "←"
+
+[node name="胡须_样式值标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/胡须/样式HBox/左右更衣HBox" unique_id=1812947443]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="胡须_右更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/胡须/样式HBox/左右更衣HBox" unique_id=447797114]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "→"
+
+[node name="眼镜" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox" unique_id=486081776]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/眼镜" unique_id=457065456]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "眼镜"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="样式HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/眼镜" unique_id=415640626]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="眼镜_名标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/眼镜/样式HBox" unique_id=247494873]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "不戴眼镜"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="左右更衣HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/眼镜/样式HBox" unique_id=751374748]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="眼镜_左更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/眼镜/样式HBox/左右更衣HBox" unique_id=496687534]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "←"
+
+[node name="眼镜_样式值标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/眼镜/样式HBox/左右更衣HBox" unique_id=1317128787]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="眼镜_右更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/眼镜/样式HBox/左右更衣HBox" unique_id=437713811]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "→"
+
+[node name="尾巴" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox" unique_id=1890239277]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/尾巴" unique_id=794475242]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "尾巴"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="样式HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/尾巴" unique_id=453888260]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="尾巴_名标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/尾巴/样式HBox" unique_id=445656613]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "光秃秃的尾巴"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="左右更衣HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/尾巴/样式HBox" unique_id=593191386]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="尾巴_左更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/尾巴/样式HBox/左右更衣HBox" unique_id=1958790711]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "←"
+
+[node name="尾巴_样式值标签" type="Label" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/尾巴/样式HBox/左右更衣HBox" unique_id=824083766]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="尾巴_右更衣按钮" type="Button" parent="创建角色界面/创建角色界面VBox/编辑面板总HBox/装饰编辑面板SC/装饰编辑面板VBox/尾巴/样式HBox/左右更衣HBox" unique_id=1721892411]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "→"
+
+[node name="界面按钮HBox" type="HBoxContainer" parent="创建角色界面/创建角色界面VBox" unique_id=1771898912]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="创建按钮" type="Button" parent="创建角色界面/创建角色界面VBox/界面按钮HBox" unique_id=146700998]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "创建"
+
+[node name="返回按钮" type="Button" parent="创建角色界面/创建角色界面VBox/界面按钮HBox" unique_id=1992576052]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+mouse_default_cursor_shape = 2
+text = "返回"
+
+[editable path="创建角色界面/创建角色界面VBox/编辑面板总HBox/人物信息编辑面板VBox/人物形象MC/玩家形象"]

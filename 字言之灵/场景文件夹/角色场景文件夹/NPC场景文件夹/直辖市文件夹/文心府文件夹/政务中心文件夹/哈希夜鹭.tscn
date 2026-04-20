@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://ygjjkmqdcdc6"]
+
+[ext_resource type="Texture2D" uid="uid://7bolfrhfwc28" path="res://图片文件夹/NPC图片文件夹/夜鹭图片文件夹/夜鹭精灵表.png" id="2_avwus"]
+[ext_resource type="Texture2D" uid="uid://b1f73g7nk4oxd" path="res://图片文件夹/NPC图片文件夹/夜鹭图片文件夹/夜鹭影子精灵表.png" id="3_b58j5"]
+
+[sub_resource type="Animation" id="Animation_b58j5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC图片节点/NPC图片精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPC图片节点/NPC影子精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_v6pkr"]
+resource_name = "上待机动画"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_7wxdl"]
+resource_name = "下待机动画"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_aj3xr"]
+resource_name = "右待机动画"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_oni6u"]
+resource_name = "左待机动画"
+length = 3.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC图片节点/NPC图片精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1.7, 1.8000001, 1.9000001, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [9, 10, 11, 12, 11, 10, 9, 13, 14, 13, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPC图片节点/NPC影子精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aj3xr"]
+_data = {
+&"RESET": SubResource("Animation_b58j5"),
+&"上待机动画": SubResource("Animation_v6pkr"),
+&"下待机动画": SubResource("Animation_7wxdl"),
+&"右待机动画": SubResource("Animation_aj3xr"),
+&"左待机动画": SubResource("Animation_oni6u")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v6pkr"]
+animation = &"下待机动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7wxdl"]
+animation = &"上待机动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aj3xr"]
+animation = &"左待机动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oni6u"]
+animation = &"右待机动画"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_v6pkr"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_v6pkr")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_7wxdl")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_aj3xr")
+blend_point_2/pos = Vector2(-1.1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_oni6u")
+blend_point_3/pos = Vector2(1.1, 0)
+min_space = Vector2(-1.1, -1)
+max_space = Vector2(1.1, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_v6pkr"]
+graph_offset = Vector2(-234, -42)
+"nodes/待机BS2D/node" = SubResource("AnimationNodeBlendSpace2D_v6pkr")
+"nodes/待机BS2D/position" = Vector2(-18.545275, 97.6067)
+node_connections = [&"output", 0, &"待机BS2D"]
+
+[node name="哈希夜鹭" type="Node2D" unique_id=387271794]
+
+[node name="NPC图片节点" type="Node2D" parent="." unique_id=1681718174]
+position = Vector2(0, -20)
+
+[node name="NPC影子精灵" type="Sprite2D" parent="NPC图片节点" unique_id=1059647367]
+texture = ExtResource("3_b58j5")
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="NPC图片精灵" type="Sprite2D" parent="NPC图片节点" unique_id=1357687280]
+texture = ExtResource("2_avwus")
+hframes = 5
+vframes = 5
+frame = 9
+
+[node name="NPC动画机" type="AnimationPlayer" parent="." unique_id=1463188622]
+libraries/ = SubResource("AnimationLibrary_aj3xr")
+autoplay = &"左待机动画"
+
+[node name="NPC动画树" type="AnimationTree" parent="." unique_id=1539757847]
+tree_root = SubResource("AnimationNodeBlendTree_v6pkr")
+anim_player = NodePath("../NPC动画机")
+"parameters/待机BS2D/blend_position" = Vector2(-1.1, 0)
+
+[node name="NPC行为计时器" type="Timer" parent="." unique_id=1132247947]
+wait_time = 3.0

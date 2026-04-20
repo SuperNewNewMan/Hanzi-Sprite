@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cm1m38yueig8s"
+path="res://.godot/imported/琥珀阿比猫_对话_基石构建.dialogue-3e023284eb6a72ab14eb00ba7757d056.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/NPC文件夹/琥珀阿比猫_对话_基石构建.dialogue"
+dest_files=["res://.godot/imported/琥珀阿比猫_对话_基石构建.dialogue-3e023284eb6a72ab14eb00ba7757d056.tres"]
+
+[params]
+
+defaults=true

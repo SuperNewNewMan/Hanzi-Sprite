@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6g1xcx4nd8h4"]
+
+[ext_resource type="Script" uid="uid://boa6n84p3nlni" path="res://脚本文件夹/地图脚本文件夹脚本/环境光脚本文件夹/昼夜调节器脚本.cs" id="1_aeyer"]
+
+[node name="昼夜调节器" type="CanvasModulate" unique_id=228164239]
+script = ExtResource("1_aeyer")
+
+[node name="记录本地时间计时器" type="Timer" parent="." unique_id=1800630568]
+wait_time = 600.0
+autostart = true

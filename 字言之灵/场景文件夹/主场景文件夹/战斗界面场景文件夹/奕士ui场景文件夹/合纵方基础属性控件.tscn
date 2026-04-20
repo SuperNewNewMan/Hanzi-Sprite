@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://s6w6fd0ma24a"]
+
+[ext_resource type="PackedScene" uid="uid://cwyw2yfx3rcq6" path="res://场景文件夹/主场景文件夹/战斗界面场景文件夹/奕士ui场景文件夹/奕士基础属性控件基类场景.tscn" id="1_6pkp0"]
+
+[node name="合纵方基础属性控件" unique_id=1362132668 instance=ExtResource("1_6pkp0")]
+custom_minimum_size = Vector2(320, 54)
+offset_right = 320.0
+offset_bottom = 298.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+
+[node name="奕士信息UIVBox" parent="." index="0" unique_id=1847243612]
+size_flags_vertical = 0
+
+[node name="状态栏" type="MarginContainer" parent="奕士信息UIVBox" index="1" unique_id=1482723350]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="奕士信息UIVBox/状态栏" index="0" unique_id=127581778]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="奕士信息UIVBox/状态栏" index="1" unique_id=820879808]
+layout_mode = 2
+
+[node name="状态标签" type="Label" parent="奕士信息UIVBox/状态栏/ScrollContainer" index="0" unique_id=1279575371]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+text = "无异常状态"
+autowrap_mode = 3

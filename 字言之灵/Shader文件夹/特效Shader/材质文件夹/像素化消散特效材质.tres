@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ljiytc1pbalv"]
+
+[ext_resource type="Shader" uid="uid://cricx47vsvg5r" path="res://Shader文件夹/特效Shader/着色器文件夹/像素化消散特效着色器.gdshader" id="1_q8d1y"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q8d1y"]
+frequency = 0.1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8rwge"]
+noise = SubResource("FastNoiseLite_q8d1y")
+
+[resource]
+shader = ExtResource("1_q8d1y")
+shader_parameter/mode = 1
+shader_parameter/progress = 0.0
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+shader_parameter/noise_offset = 0.01
+shader_parameter/grid_size = 100.0
+shader_parameter/edge_power = 100.0
+shader_parameter/PerlinNoise = SubResource("NoiseTexture2D_8rwge")

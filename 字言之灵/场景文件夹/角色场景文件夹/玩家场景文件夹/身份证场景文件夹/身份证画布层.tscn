@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://canses1lln2sr"]
+
+[ext_resource type="Script" uid="uid://boyvuowiljsux" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/身份证UI脚本文件夹/身份证画布层.cs" id="1_qbje8"]
+[ext_resource type="FontFile" uid="uid://c40jgy7d0n542" path="res://字体文件夹/BoutiqueBitmap9x9_1.92.ttf" id="2_325rv"]
+[ext_resource type="Texture2D" uid="uid://8mlexkl5jsh8" path="res://图片文件夹/功能型工具图片文件夹/身份证UI图片文件夹/身份证面板UI图片.png" id="2_qbje8"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="2_wd2vg"]
+
+[sub_resource type="FontVariation" id="FontVariation_325rv"]
+base_font = ExtResource("2_325rv")
+spacing_glyph = 6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_325rv"]
+atlas = ExtResource("2_wd2vg")
+region = Rect2(128, 48, 16, 16)
+
+[node name="身份证画布层" type="CanvasLayer" unique_id=166040666]
+visible = false
+script = ExtResource("1_qbje8")
+
+[node name="身份证" type="Control" parent="." unique_id=807593253]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = -115.0
+offset_right = 205.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="身份证" unique_id=1725609160]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="背景图片" type="TextureRect" parent="身份证/MarginContainer" unique_id=114477712]
+layout_mode = 2
+texture = ExtResource("2_qbje8")
+
+[node name="个人信息总节点" type="Node2D" parent="身份证/MarginContainer" unique_id=1963739673]
+
+[node name="姓名节点" type="Node2D" parent="身份证/MarginContainer/个人信息总节点" unique_id=218542833]
+position = Vector2(71, 16)
+
+[node name="姓名标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/姓名节点" unique_id=1669237080]
+unique_name_in_owner = true
+offset_right = 32.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 16
+text = "鼠鼠"
+
+[node name="性别节点" type="Node2D" parent="身份证/MarginContainer/个人信息总节点" unique_id=1605197475]
+position = Vector2(71, 47)
+
+[node name="性别标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/性别节点" unique_id=1437581618]
+unique_name_in_owner = true
+offset_right = 12.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 12
+text = "男"
+
+[node name="种族节点" type="Node2D" parent="身份证/MarginContainer/个人信息总节点" unique_id=190373675]
+position = Vector2(151, 47)
+
+[node name="种族标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/种族节点" unique_id=819907525]
+unique_name_in_owner = true
+offset_right = 24.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 12
+text = "家鼠"
+
+[node name="出生节点" type="Node2D" parent="身份证/MarginContainer/个人信息总节点" unique_id=1673956196]
+position = Vector2(71, 75)
+
+[node name="年标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/出生节点" unique_id=1438351758]
+unique_name_in_owner = true
+offset_right = 29.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 12
+text = "2004"
+horizontal_alignment = 1
+
+[node name="月标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/出生节点" unique_id=1141967240]
+unique_name_in_owner = true
+offset_left = 49.0
+offset_right = 64.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 12
+text = "12"
+horizontal_alignment = 1
+
+[node name="日标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/出生节点" unique_id=1256716728]
+unique_name_in_owner = true
+offset_left = 83.0
+offset_right = 98.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 12
+text = "10"
+horizontal_alignment = 1
+
+[node name="住址节点" type="Node2D" parent="身份证/MarginContainer/个人信息总节点" unique_id=532891164]
+position = Vector2(71, 95)
+
+[node name="住址标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/住址节点" unique_id=1802651698]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(169, 31)
+offset_right = 169.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 12
+text = "文心府龙游梅区冬明街道107号4单元4101室"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="字灵证节点" type="Node2D" parent="身份证/MarginContainer/个人信息总节点" unique_id=821483855]
+position = Vector2(91, 132)
+
+[node name="字灵证标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/字灵证节点" unique_id=1278978839]
+unique_name_in_owner = true
+offset_right = 36.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 12
+text = "未开通"
+
+[node name="学术头衔节点" type="Node2D" parent="身份证/MarginContainer/个人信息总节点" unique_id=1979722606]
+position = Vector2(103, 160)
+
+[node name="学术头衔标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/学术头衔节点" unique_id=1839408447]
+unique_name_in_owner = true
+offset_right = 12.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_325rv")
+theme_override_font_sizes/font_size = 12
+text = "无"
+
+[node name="身份证号节点" type="Node2D" parent="身份证/MarginContainer/个人信息总节点" unique_id=1505409304]
+position = Vector2(137, 209)
+
+[node name="身份证号标签" type="Label" parent="身份证/MarginContainer/个人信息总节点/身份证号节点" unique_id=606890012]
+unique_name_in_owner = true
+offset_left = -2.0
+offset_right = 230.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_325rv")
+theme_override_font_sizes/font_size = 12
+text = "100101200412100000"
+
+[node name="身份证关闭按钮" type="Button" parent="身份证" unique_id=335826964]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_325rv")

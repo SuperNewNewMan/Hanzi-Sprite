@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://daq10t6y6cba"]
+
+[ext_resource type="Script" uid="uid://c0cvlgn2w6v4q" path="res://脚本文件夹/特殊场景脚本文件夹/教程画布层脚本文件夹/面板教程画布层脚本.cs" id="1_dn6oe"]
+[ext_resource type="Texture2D" uid="uid://c2m2vnys5kty6" path="res://图片文件夹/功能型工具图片文件夹/教程光圈图片文件夹/高光光圈.png" id="2_ibrt5"]
+
+[sub_resource type="Animation" id="Animation_vr8ii"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("面板教程光圈节点/光圈1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("面板教程光圈节点/光圈2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("面板教程光圈节点/光圈3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_acp4a"]
+resource_name = "光圈动画"
+length = 2.0
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("面板教程光圈节点/光圈1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(2, 2), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(3, 3), Vector2(2, 2), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("面板教程光圈节点/光圈2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(3, 3), Vector2(2, 2), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("面板教程光圈节点/光圈3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(3, 3), Vector2(2, 2), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vr8ii"]
+_data = {
+&"RESET": SubResource("Animation_vr8ii"),
+&"光圈动画": SubResource("Animation_acp4a")
+}
+
+[node name="面板教程画布层" type="CanvasLayer" unique_id=1140501198]
+layer = 10
+script = ExtResource("1_dn6oe")
+
+[node name="面板教程遮罩" type="ColorRect" parent="." unique_id=454955532]
+self_modulate = Color(0, 0, 0, 0.7058824)
+clip_children = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="面板教程洞口" type="TextureRect" parent="面板教程遮罩" unique_id=529228119]
+layout_mode = 0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="面板教程光圈节点" type="Node2D" parent="." unique_id=693996472]
+position = Vector2(166, 241)
+
+[node name="光圈1" type="Sprite2D" parent="面板教程光圈节点" unique_id=773644910]
+scale = Vector2(3, 3)
+texture = ExtResource("2_ibrt5")
+
+[node name="光圈2" type="Sprite2D" parent="面板教程光圈节点" unique_id=1303437352]
+scale = Vector2(2, 2)
+texture = ExtResource("2_ibrt5")
+
+[node name="光圈3" type="Sprite2D" parent="面板教程光圈节点" unique_id=1416822587]
+texture = ExtResource("2_ibrt5")
+
+[node name="面板教程动画机" type="AnimationPlayer" parent="." unique_id=1797911297]
+libraries/ = SubResource("AnimationLibrary_vr8ii")

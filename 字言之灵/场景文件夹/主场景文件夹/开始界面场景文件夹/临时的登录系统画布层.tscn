@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dle7bq2lsbdww"]
+
+[ext_resource type="Script" uid="uid://b54lhu83jbuky" path="res://脚本文件夹/主场景脚本文件夹/开始界面脚本文件夹/临时的登录系统画布层脚本.cs" id="1_ks5eq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75b6h"]
+
+[node name="临时的登录系统画布层" type="CanvasLayer" unique_id=1138835138]
+layer = 10
+script = ExtResource("1_ks5eq")
+
+[node name="Control" type="Control" parent="." unique_id=1221521515]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=114216301]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_75b6h")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=770915360]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=586146695]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=153813388]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="账号标签" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1011049503]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 36
+text = "账号："
+
+[node name="账号LE" type="LineEdit" parent="Control/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1967876728]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "请输入账号……"
+
+[node name="登录按钮" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=783373348]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "登录"

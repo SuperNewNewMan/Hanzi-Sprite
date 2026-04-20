@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://b50jvl6ordnpk"]
+
+[ext_resource type="Texture2D" uid="uid://bvdsax34i7pxb" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/瓦片图片文件夹/政务中心瓦片精灵表2.png" id="1_oevxt"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="2_ku2d0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku2d0"]
+atlas = ExtResource("1_oevxt")
+region = Rect2(160, 0, 256, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_embed"]
+atlas = ExtResource("2_ku2d0")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oevxt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ku2d0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oevxt"]
+atlas = ExtResource("1_oevxt")
+region = Rect2(32, 48, 48, 32)
+
+[node name="自助售货机面板" type="CanvasLayer" unique_id=801790102]
+
+[node name="Control" type="Control" parent="." unique_id=1608842311]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=929508837]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -320.0
+offset_right = 512.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_ku2d0")
+
+[node name="关闭面板按钮" type="Button" parent="Control/TextureRect" unique_id=2127140828]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_right = -1.0
+offset_bottom = 40.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_embed")
+expand_icon = true
+
+[node name="Node2D" type="Node2D" parent="Control" unique_id=81492828]
+position = Vector2(876, 423)
+
+[node name="购买数量LE" type="LineEdit" parent="Control/Node2D" unique_id=934308121]
+unique_name_in_owner = true
+offset_left = -64.0
+offset_top = -57.0
+offset_right = 162.0
+offset_bottom = -17.0
+size_flags_horizontal = 3
+placeholder_text = "请输入购买数量"
+
+[node name="购买按钮" type="Button" parent="Control/Node2D" unique_id=884274198]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 96.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oevxt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ku2d0")
+icon = SubResource("AtlasTexture_oevxt")
+flat = true
+icon_alignment = 1
+expand_icon = true

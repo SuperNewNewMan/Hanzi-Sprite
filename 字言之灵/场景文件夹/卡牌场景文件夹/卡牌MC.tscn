@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://3et5mhdrkkd"]
+
+[ext_resource type="Texture2D" uid="uid://bckwfuuhg2owe" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/通用图片文件夹/属性图片文件夹/延展属性/人文属性/人文牌.png" id="1_uulc1"]
+[ext_resource type="Texture2D" uid="uid://drmdas63hq6ud" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/汉字图片文件夹/sh声母/i韵母/市_shi_4.png" id="2_8ru3a"]
+[ext_resource type="FontFile" uid="uid://wlicflx5pyfn" path="res://字体文件夹/4117_方正行楷_GBK.ttf" id="3_c4j0u"]
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="4_e4awl"]
+[ext_resource type="Texture2D" uid="uid://dajswhojjajr7" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/通用图片文件夹/未知卡牌背景.png" id="5_7o4te"]
+
+[node name="卡牌MC" type="MarginContainer" unique_id=1812730494]
+offset_right = 80.0
+offset_bottom = 120.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="卡牌正面图片" type="TextureRect" parent="." unique_id=926185622]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_uulc1")
+stretch_mode = 2
+
+[node name="数值标签" type="Label" parent="." unique_id=592992461]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_e4awl")
+theme_override_font_sizes/font_size = 16
+text = "5"
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=972224135]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 64
+
+[node name="汉字图片" type="TextureRect" parent="MarginContainer2" unique_id=1340780821]
+layout_mode = 2
+texture = ExtResource("2_8ru3a")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1473111910]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="签名标签" type="Label" parent="MarginContainer" unique_id=1866642660]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_c4j0u")
+theme_override_font_sizes/font_size = 8
+text = "市市市市市市市，市市市市市市市。"
+autowrap_mode = 3
+
+[node name="卡牌背面图片" type="TextureRect" parent="." unique_id=1660689671]
+visible = false
+layout_mode = 2
+texture = ExtResource("5_7o4te")

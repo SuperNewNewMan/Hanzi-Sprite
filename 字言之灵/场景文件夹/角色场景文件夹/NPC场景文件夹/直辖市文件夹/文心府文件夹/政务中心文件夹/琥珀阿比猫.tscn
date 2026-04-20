@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://brmx7gpkf547e"]
+
+[ext_resource type="Texture2D" uid="uid://ddnd2ienj5vbq" path="res://图片文件夹/NPC图片文件夹/阿比西尼亚猫图片文件夹/阿比西尼亚猫影子.png" id="1_22pfq"]
+[ext_resource type="Texture2D" uid="uid://dni7q53hyyvl6" path="res://图片文件夹/NPC图片文件夹/阿比西尼亚猫图片文件夹/阿比西尼亚猫精灵表.png" id="2_ml5rv"]
+
+[sub_resource type="Animation" id="Animation_22pfq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC图片节点/NPC图片精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ml5rv"]
+resource_name = "下待机动画"
+length = 4.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC图片节点/NPC图片精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 2, 2.1, 2.1999998, 2.3000002, 2.4, 2.5, 2.6, 2.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1, 0, 3, 4, 3, 0, 5, 6, 5, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_33emb"]
+_data = {
+&"RESET": SubResource("Animation_22pfq"),
+&"下待机动画": SubResource("Animation_ml5rv")
+}
+
+[node name="琥珀阿比猫" type="Node2D" unique_id=409686459]
+
+[node name="NPC图片节点" type="Node2D" parent="." unique_id=1571701690]
+position = Vector2(0, -20)
+
+[node name="NPC影子精灵" type="Sprite2D" parent="NPC图片节点" unique_id=1766017341]
+texture = ExtResource("1_22pfq")
+
+[node name="NPC图片精灵" type="Sprite2D" parent="NPC图片节点" unique_id=499385897]
+texture = ExtResource("2_ml5rv")
+hframes = 5
+vframes = 5
+
+[node name="NPC动画机" type="AnimationPlayer" parent="." unique_id=313391756]
+libraries/ = SubResource("AnimationLibrary_33emb")
+autoplay = &"下待机动画"

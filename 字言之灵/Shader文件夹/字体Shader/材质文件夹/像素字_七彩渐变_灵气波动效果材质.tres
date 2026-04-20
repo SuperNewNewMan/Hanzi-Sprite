@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b7qcee0kfdxou"]
+
+[ext_resource type="Shader" uid="uid://ckfvjc3konknl" path="res://Shader文件夹/字体Shader/着色器文件夹/像素字_七彩渐变_灵气波动效果着色器.gdshader" id="1_svhb6"]
+
+[resource]
+shader = ExtResource("1_svhb6")
+shader_parameter/cutoff = 0.5
+shader_parameter/aura_range = 4.0
+shader_parameter/rainbow_speed = 0.05
+shader_parameter/aura_speed = 2.0
+shader_parameter/aura_strength = 0.4

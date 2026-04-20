@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bpr0kt41vvp77"]
+
+[ext_resource type="FontFile" uid="uid://wlicflx5pyfn" path="res://字体文件夹/4117_方正行楷_GBK.ttf" id="1_qi5x8"]
+[ext_resource type="FontFile" uid="uid://c40jgy7d0n542" path="res://字体文件夹/BoutiqueBitmap9x9_1.92.ttf" id="2_e0n6o"]
+
+[node name="字灵槽位" type="MarginContainer" unique_id=488150751]
+
+[node name="字灵按钮" type="Button" parent="." unique_id=154577994]
+z_index = 2
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_qi5x8")
+theme_override_font_sizes/font_size = 48
+toggle_mode = true
+text = "勾"
+
+[node name="数量标签" type="Label" parent="字灵按钮" unique_id=913155108]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -14.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_e0n6o")
+theme_override_font_sizes/font_size = 12
+text = "1"

@@ -1,0 +1,431 @@
+[gd_scene format=3 uid="uid://b3ujypnmpjboe"]
+
+[ext_resource type="Script" uid="uid://dhex0qwctf2q0" path="res://脚本文件夹/主场景脚本文件夹/设置界面脚本文件夹/设置画布层脚本.cs" id="1_rm85h"]
+[ext_resource type="ButtonGroup" uid="uid://crm6ewejrf2fp" path="res://资源文件夹/按钮组别Tres资源文件夹/游玩方式按钮组.tres" id="2_py3my"]
+[ext_resource type="PackedScene" uid="uid://cxdgvvrwou0g" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/摇杆.tscn" id="4_3md0i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2whv5"]
+bg_color = Color(0.27387288, 0.2738727, 0.27387273, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nalj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28gdt"]
+bg_color = Color(0.27387273, 0.27387276, 0.2738727, 1)
+
+[node name="设置画布层" type="CanvasLayer" unique_id=1058227612]
+script = ExtResource("1_rm85h")
+
+[node name="设置总容器" type="MarginContainer" parent="." unique_id=1058874993]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="设置界面" type="MarginContainer" parent="设置总容器" unique_id=1428660059]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="设置总容器/设置界面" unique_id=689167129]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2whv5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="设置总容器/设置界面" unique_id=165184480]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="设置总容器/设置界面/VBoxContainer" unique_id=528216224]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 56
+text = "设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="设置Scroll" type="ScrollContainer" parent="设置总容器/设置界面/VBoxContainer" unique_id=687182208]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="设置VBox" type="VBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll" unique_id=498279121]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 36
+
+[node name="游玩方式VBox" type="VBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox" unique_id=624443250]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="游玩方式设置标题" type="Label" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox" unique_id=1209137889]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 36
+text = "游玩方式"
+
+[node name="电脑端方式HBox" type="HBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox" unique_id=71336663]
+layout_mode = 2
+
+[node name="电脑端标签" type="Label" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox/电脑端方式HBox" unique_id=1039113598]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "——电脑端（影响操作方式，如“用WASD进行移动”）"
+
+[node name="电脑端按钮" type="CheckButton" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox/电脑端方式HBox" unique_id=1536177954]
+layout_mode = 2
+size_flags_horizontal = 10
+mouse_default_cursor_shape = 2
+button_group = ExtResource("2_py3my")
+
+[node name="手机端方式HBox" type="HBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox" unique_id=1291889164]
+layout_mode = 2
+
+[node name="手机端标签" type="Label" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox/手机端方式HBox" unique_id=32263179]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 36
+text = "——手机端（影响操作方式，如“用摇杆进行移动”）"
+
+[node name="手机端按钮" type="CheckButton" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox/手机端方式HBox" unique_id=1345822712]
+layout_mode = 2
+size_flags_horizontal = 10
+mouse_default_cursor_shape = 2
+button_group = ExtResource("2_py3my")
+
+[node name="自定义键位VBox" type="VBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox" unique_id=2022672337]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="自定义键位设置标题" type="Label" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/自定义键位VBox" unique_id=77477828]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 36
+text = "自定义键位"
+
+[node name="自定义键盘HBox" type="HBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/自定义键位VBox" unique_id=298153802]
+layout_mode = 2
+
+[node name="自定义键盘标签" type="Label" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/自定义键位VBox/自定义键盘HBox" unique_id=1388159665]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 36
+text = "——键盘"
+
+[node name="自定义键盘按钮" type="Button" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/自定义键位VBox/自定义键盘HBox" unique_id=1100048774]
+layout_mode = 2
+size_flags_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "自定义"
+
+[node name="自定义摇杆HBox" type="HBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/自定义键位VBox" unique_id=1975085502]
+layout_mode = 2
+
+[node name="自定义摇杆标签" type="Label" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/自定义键位VBox/自定义摇杆HBox" unique_id=1256504441]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 36
+text = "——摇杆"
+
+[node name="自定义摇杆按钮" type="Button" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/自定义键位VBox/自定义摇杆HBox" unique_id=420432834]
+layout_mode = 2
+size_flags_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "自定义"
+
+[node name="音量VBox" type="VBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox" unique_id=1979063983]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="音量设置标题" type="Label" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/音量VBox" unique_id=60421913]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 36
+text = "音量"
+
+[node name="总音量HBox" type="HBoxContainer" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/音量VBox" unique_id=1653600298]
+layout_mode = 2
+
+[node name="总音量滑块标签" type="Label" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/音量VBox/总音量HBox" unique_id=554033112]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "——总音量"
+
+[node name="总音量滑块" type="HSlider" parent="设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/音量VBox/总音量HBox" unique_id=880180684]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+value = 100.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="设置总容器/设置界面/VBoxContainer" unique_id=914770096]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 16
+
+[node name="保存按钮" type="Button" parent="设置总容器/设置界面/VBoxContainer/HBoxContainer" unique_id=769052911]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "保存"
+
+[node name="返回按钮" type="Button" parent="设置总容器/设置界面/VBoxContainer/HBoxContainer" unique_id=2142388904]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "返回"
+
+[node name="自定义键位界面" type="Panel" parent="设置总容器" unique_id=2098559192]
+visible = false
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5nalj")
+
+[node name="摇杆画布层" parent="设置总容器/自定义键位界面" unique_id=1872426863 instance=ExtResource("4_3md0i")]
+layer = 2
+visible = false
+
+[node name="键盘画布层" type="CanvasLayer" parent="设置总容器/自定义键位界面" unique_id=1106524563]
+layer = 2
+visible = false
+
+[node name="Panel" type="Panel" parent="设置总容器/自定义键位界面/键盘画布层" unique_id=1944178352]
+custom_minimum_size = Vector2(0, 520)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_28gdt")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="设置总容器/自定义键位界面/键盘画布层/Panel" unique_id=762900208]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer" unique_id=491421430]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="上移HBox" type="HBoxContainer" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer" unique_id=1436701050]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/上移HBox" unique_id=168447389]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "上移："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="上" type="LineEdit" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/上移HBox" unique_id=472623619]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "W"
+alignment = 1
+select_all_on_focus = true
+
+[node name="下移HBox" type="HBoxContainer" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer" unique_id=646585239]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/下移HBox" unique_id=413942739]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "下移："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="下" type="LineEdit" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/下移HBox" unique_id=76848817]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "S"
+alignment = 1
+select_all_on_focus = true
+
+[node name="左移HBox" type="HBoxContainer" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer" unique_id=511285199]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/左移HBox" unique_id=223976598]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "左移："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="左" type="LineEdit" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/左移HBox" unique_id=518038777]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "A"
+alignment = 1
+select_all_on_focus = true
+
+[node name="右移HBox" type="HBoxContainer" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer" unique_id=1714027963]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/右移HBox" unique_id=963491216]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "右移："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="右" type="LineEdit" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/右移HBox" unique_id=1078839157]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "D"
+alignment = 1
+select_all_on_focus = true
+
+[node name="确认HBox" type="HBoxContainer" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer" unique_id=2067373242]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/确认HBox" unique_id=218279058]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "确认："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="确认" type="LineEdit" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/确认HBox" unique_id=120500892]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "Enter"
+alignment = 1
+select_all_on_focus = true
+
+[node name="菜单栏HBox" type="HBoxContainer" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer" unique_id=334303457]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/菜单栏HBox" unique_id=2082952250]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "菜单栏："
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="菜单栏" type="LineEdit" parent="设置总容器/自定义键位界面/键盘画布层/Panel/ScrollContainer/VBoxContainer/菜单栏HBox" unique_id=313019149]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 48
+text = "Esc"
+alignment = 1
+select_all_on_focus = true
+
+[node name="按钮画布层" type="CanvasLayer" parent="设置总容器/自定义键位界面" unique_id=538148624]
+layer = 2
+visible = false
+
+[node name="Panel" type="Panel" parent="设置总容器/自定义键位界面/按钮画布层" unique_id=989180989]
+custom_minimum_size = Vector2(400, 120)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="设置总容器/自定义键位界面/按钮画布层/Panel" unique_id=1728083211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 36
+
+[node name="默认按钮" type="Button" parent="设置总容器/自定义键位界面/按钮画布层/Panel/HBoxContainer" unique_id=702287060]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "默认"
+
+[node name="保存按钮" type="Button" parent="设置总容器/自定义键位界面/按钮画布层/Panel/HBoxContainer" unique_id=72107189]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "保存"
+
+[node name="返回按钮" type="Button" parent="设置总容器/自定义键位界面/按钮画布层/Panel/HBoxContainer" unique_id=1004536840]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "返回"

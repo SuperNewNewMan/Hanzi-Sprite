@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://k3qw2mv6587q"]
+
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="1_qh3ub"]
+[ext_resource type="Script" uid="uid://ck0gm86kfujfu" path="res://脚本文件夹/主场景脚本文件夹/存档界面脚本文件夹/存档画布层脚本.cs" id="1_vivnl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hq1i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdj3f"]
+bg_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75b6h"]
+atlas = ExtResource("1_qh3ub")
+region = Rect2(128, 48, 16, 16)
+
+[node name="存档画布层" type="CanvasLayer" unique_id=1751517628]
+visible = false
+script = ExtResource("1_vivnl")
+
+[node name="存档界面" type="Panel" parent="." unique_id=2091123616]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0hq1i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="存档界面" unique_id=1830055012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="顶栏Panel" type="Panel" parent="存档界面/VBoxContainer" unique_id=1776342049]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qdj3f")
+
+[node name="Label" type="Label" parent="存档界面/VBoxContainer/顶栏Panel" unique_id=1170775853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.4506483, 0.4506483, 0.45064825, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "您的存档"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="关闭存档界面按钮" type="Button" parent="存档界面/VBoxContainer/顶栏Panel" unique_id=2137600151]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 42
+icon = SubResource("AtlasTexture_75b6h")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="存档界面/VBoxContainer" unique_id=1963658822]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="存档栏VBox" type="VBoxContainer" parent="存档界面/VBoxContainer/ScrollContainer" unique_id=697686106]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="删档提示Panel" type="Panel" parent="存档界面" unique_id=1911347439]
+visible = false
+custom_minimum_size = Vector2(520, 240)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="存档界面/删档提示Panel" unique_id=224474935]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="存档界面/删档提示Panel/VBoxContainer" unique_id=428186719]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "您确定要删除这个存档吗？"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="存档界面/删档提示Panel/VBoxContainer" unique_id=2021264550]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="删档确认按钮" type="Button" parent="存档界面/删档提示Panel/VBoxContainer/HBoxContainer" unique_id=1548044536]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "是"
+
+[node name="删档取消按钮" type="Button" parent="存档界面/删档提示Panel/VBoxContainer/HBoxContainer" unique_id=2027034925]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "不"

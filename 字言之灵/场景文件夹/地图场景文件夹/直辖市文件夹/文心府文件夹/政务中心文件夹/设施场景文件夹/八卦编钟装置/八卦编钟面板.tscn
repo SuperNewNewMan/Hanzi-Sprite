@@ -1,0 +1,691 @@
+[gd_scene format=3 uid="uid://b55pyn0dr48lh"]
+
+[ext_resource type="Script" uid="uid://cn1osef3rbiv" path="res://脚本文件夹/地图脚本文件夹脚本/可交互体脚本文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/面板型可交互体文件夹/八卦编钟面板脚本.cs" id="1_pe0ve"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="2_fy76j"]
+[ext_resource type="Texture2D" uid="uid://byn6mlr0dauyw" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/设施图片文件夹/八卦编钟图片文件夹/八卦编钟精灵表.png" id="2_mk3da"]
+[ext_resource type="Texture2D" uid="uid://cuwaypgivmreh" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/汉字图片文件夹/g声母/ou韵母/钩_gou_1.png" id="3_rj1sq"]
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="4_fbtmm"]
+[ext_resource type="Shader" uid="uid://dfs87bhqyy544" path="res://Shader文件夹/特效Shader/着色器文件夹/冲击波强震特效着色器.gdshader" id="6_fbtmm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbtmm"]
+bg_color = Color(0.2, 0.2, 0.2, 0.7058824)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aweba"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(0, 0, 64, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo7nd"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(128, 32, 128, 80)
+
+[sub_resource type="Animation" id="Animation_rj1sq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1dhel"]
+resource_name = "紫布飘逸动画"
+loop_mode = 2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r8rgg"]
+_data = {
+&"RESET": SubResource("Animation_rj1sq"),
+&"紫布飘逸动画": SubResource("Animation_1dhel")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rj1sq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fbtmm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy76j"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aweba"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk3da"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbtmm"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj1sq"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dhel"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8rgg"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1xh7"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve6kf"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr4h2"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(0, 112, 256, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0yad"]
+atlas = ExtResource("2_mk3da")
+region = Rect2(0, 208, 96, 24)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rj1sq"]
+shader = ExtResource("6_fbtmm")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/progress = 1.0
+shader_parameter/width = 0.1
+shader_parameter/strength = 0.05
+shader_parameter/trail = 0.15
+shader_parameter/falloff = 1.4
+shader_parameter/shake_strength = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e35m8"]
+atlas = ExtResource("2_fy76j")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="Animation" id="Animation_aweba"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("编钟精灵:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("形旁按钮总控件:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("造字图片:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("钟槌精灵:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1017, 244.00002)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("钟槌精灵:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("%钟槌按钮:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_fbtmm"]
+resource_name = "启用动画"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mk3da"]
+resource_name = "造字冲击波动画"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 2.1000001),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("编钟精灵:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.29999998, 0.49999997, 0.70000005, 0.89999986, 1.0999999, 1.3, 1.5, 1.6999998),
+"transitions": PackedFloat32Array(0.4, 1.6, 0.4, 1.6, 0.4, 1.6, 0.4, 1.6, 1),
+"update": 0,
+"values": [0.0, 0.7853982, 0.0, -0.5235987755982988, 0.0, 0.2617994, 0.0, -0.08726646, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("形旁按钮总控件:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("造字图片:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("钟槌精灵:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(2, 0.4, 1),
+"update": 0,
+"values": [Vector2(1017, 244.00002), Vector2(684, 339), Vector2(1017, 244.00002)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("钟槌精灵:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(2, 0.4, 1),
+"update": 0,
+"values": [0.0, -0.5235988, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("%钟槌按钮:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aweba"]
+_data = {
+&"RESET": SubResource("Animation_aweba"),
+&"启用动画": SubResource("Animation_fbtmm"),
+&"造字冲击波动画": SubResource("Animation_mk3da")
+}
+
+[node name="八卦编钟面板" type="CanvasLayer" unique_id=1618044612]
+layer = 2
+script = ExtResource("1_pe0ve")
+
+[node name="Control" type="Control" parent="." unique_id=289462091]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=2050778105]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fbtmm")
+
+[node name="编钟精灵" type="Sprite2D" parent="Control" unique_id=1658428370]
+position = Vector2(577, 55)
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_aweba")
+offset = Vector2(0, 53)
+
+[node name="造字图片" type="TextureRect" parent="Control" unique_id=1164965884]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -108.0
+offset_right = 108.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_rj1sq")
+
+[node name="钟槌精灵" type="Sprite2D" parent="Control" unique_id=1345200823]
+position = Vector2(1017, 244.00002)
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_wo7nd")
+hframes = 4
+
+[node name="钟槌按钮" type="Button" parent="Control/钟槌精灵" unique_id=1269174768]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -40.000004
+offset_right = -16.0
+offset_bottom = -40.000004
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="钟槌精灵动画机" type="AnimationPlayer" parent="Control/钟槌精灵" unique_id=192077899]
+libraries/ = SubResource("AnimationLibrary_r8rgg")
+autoplay = &"紫布飘逸动画"
+
+[node name="形旁按钮总控件" type="Control" parent="Control" unique_id=108238674]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="风" type="Button" parent="Control/形旁按钮总控件" unique_id=327355559]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_right = 60.0
+offset_bottom = 120.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rj1sq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_fy76j")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="雷" type="Button" parent="Control/形旁按钮总控件" unique_id=1361463979]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 76.0
+offset_top = 76.0
+offset_right = 196.0
+offset_bottom = 196.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aweba")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_mk3da")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="木" type="Button" parent="Control/形旁按钮总控件" unique_id=704183978]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 136.0
+offset_top = 207.0
+offset_right = 256.0
+offset_bottom = 327.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aweba")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_fbtmm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="土" type="Button" parent="Control/形旁按钮总控件" unique_id=967632009]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 81.0
+offset_top = 340.0
+offset_right = 201.0
+offset_bottom = 460.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aweba")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_rj1sq")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="暗" type="Button" parent="Control/形旁按钮总控件" unique_id=194065254]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.0
+offset_top = 379.0
+offset_right = 64.0
+offset_bottom = 499.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aweba")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_1dhel")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="金" type="Button" parent="Control/形旁按钮总控件" unique_id=576899797]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -203.0
+offset_top = 340.0
+offset_right = -83.0
+offset_bottom = 460.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aweba")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_r8rgg")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="火" type="Button" parent="Control/形旁按钮总控件" unique_id=593651300]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -246.0
+offset_top = 207.0
+offset_right = -126.0
+offset_bottom = 327.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aweba")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_s1xh7")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="水" type="Button" parent="Control/形旁按钮总控件" unique_id=76636309]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -196.0
+offset_top = 76.0
+offset_right = -76.0
+offset_bottom = 196.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aweba")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fbtmm")
+icon = SubResource("AtlasTexture_ve6kf")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="教程按钮" type="Button" parent="Control" unique_id=1496506197]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 440.0
+offset_right = 80.0
+offset_bottom = 484.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 32
+text = "提示"
+
+[node name="字灵库存MC" type="MarginContainer" parent="Control" unique_id=1539544263]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -160.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="背景" type="TextureRect" parent="Control/字灵库存MC" unique_id=1732738614]
+custom_minimum_size = Vector2(512, 160)
+layout_mode = 2
+texture = SubResource("AtlasTexture_qr4h2")
+
+[node name="牌匾" type="TextureRect" parent="Control/字灵库存MC/背景" unique_id=581247442]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_right = 96.0
+offset_bottom = 48.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_i0yad")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/字灵库存MC" unique_id=1665109510]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/字灵库存MC/MarginContainer" unique_id=609563075]
+layout_mode = 2
+
+[node name="字灵按钮HBox" type="HBoxContainer" parent="Control/字灵库存MC/MarginContainer/ScrollContainer" unique_id=621811964]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=880466565]
+layout_mode = 0
+offset_right = 125.0
+offset_bottom = 94.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1578463734]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=1155318603]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_fbtmm")
+theme_override_font_sizes/font_size = 40
+text = "形旁："
+
+[node name="形旁标签" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=2125396136]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_fbtmm")
+theme_override_font_sizes/font_size = 40
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=568378506]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer2" unique_id=1964134968]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_fbtmm")
+theme_override_font_sizes/font_size = 40
+text = "声旁："
+
+[node name="声旁标签" type="Label" parent="Control/VBoxContainer/HBoxContainer2" unique_id=1390885052]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_fbtmm")
+theme_override_font_sizes/font_size = 40
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=387572255]
+material = SubResource("ShaderMaterial_rj1sq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="关闭面板按钮" type="Button" parent="Control" unique_id=551546007]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_e35m8")
+expand_icon = true
+
+[node name="八卦编钟动画机" type="AnimationPlayer" parent="Control" unique_id=1910743254]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_aweba")
+autoplay = &"启用动画"

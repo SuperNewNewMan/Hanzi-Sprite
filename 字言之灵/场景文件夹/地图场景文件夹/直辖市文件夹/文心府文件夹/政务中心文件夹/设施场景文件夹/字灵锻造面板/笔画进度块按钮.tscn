@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dg7y82l42gs7s"]
+
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="1_2cwxg"]
+
+[node name="笔画进度块按钮" type="Button" unique_id=966676721]
+z_index = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_2cwxg")
+theme_override_font_sizes/font_size = 64
+text = "丿"

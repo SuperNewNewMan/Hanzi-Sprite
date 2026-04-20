@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dav50eksjpw8n"]
+
+[ext_resource type="Shader" uid="uid://cjsylkhs56c2r" path="res://Shader文件夹/字体Shader/着色器文件夹/像素字_纯色描边效果着色器.gdshader" id="1_elai6"]
+
+[resource]
+shader = ExtResource("1_elai6")
+shader_parameter/outline_size = 2.0
+shader_parameter/cutoff = 0.5
+shader_parameter/outline_color = Color(0, 0, 0, 1)

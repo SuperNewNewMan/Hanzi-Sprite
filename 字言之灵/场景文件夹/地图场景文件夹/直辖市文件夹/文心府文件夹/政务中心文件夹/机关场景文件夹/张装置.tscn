@@ -1,0 +1,515 @@
+[gd_scene format=3 uid="uid://cfflb8vbj08oq"]
+
+[ext_resource type="Shader" uid="uid://cricx47vsvg5r" path="res://Shader文件夹/特效Shader/着色器文件夹/像素化消散特效着色器.gdshader" id="1_2ahee"]
+[ext_resource type="Texture2D" uid="uid://bvdsax34i7pxb" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/瓦片图片文件夹/政务中心瓦片精灵表2.png" id="1_fdujp"]
+[ext_resource type="Texture2D" uid="uid://bla455xuc76q" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/瓦片图片文件夹/政务中心瓦片精灵表.png" id="2_wyc1c"]
+[ext_resource type="Texture2D" uid="uid://bn4ydytt8n0ad" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/汉字图片文件夹/g声母/ong韵母/弓_gong_1.png" id="4_em7mw"]
+[ext_resource type="Texture2D" uid="uid://7me3o13k2oqt" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/汉字图片文件夹/ch声母/ang韵母/长_chang_2.png" id="5_wkwoi"]
+[ext_resource type="Texture2D" uid="uid://0o2xd3jrskcl" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/汉字图片文件夹/zh声母/ang韵母/张_zhang_1.png" id="6_rraxe"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q8d1y"]
+frequency = 0.1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8rwge"]
+noise = SubResource("FastNoiseLite_q8d1y")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fgp3f"]
+shader = ExtResource("1_2ahee")
+shader_parameter/mode = 1
+shader_parameter/progress = 0.0
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+shader_parameter/noise_offset = 0.01
+shader_parameter/grid_size = 25.0
+shader_parameter/edge_power = 15.0
+shader_parameter/PerlinNoise = SubResource("NoiseTexture2D_8rwge")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50e1a"]
+atlas = ExtResource("1_fdujp")
+region = Rect2(0, 48, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyc1c"]
+atlas = ExtResource("1_fdujp")
+region = Rect2(0, 32, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgp3f"]
+atlas = ExtResource("1_fdujp")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ahee"]
+atlas = ExtResource("2_wyc1c")
+region = Rect2(80, 224, 16, 16)
+
+[sub_resource type="Animation" id="Animation_2ahee"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("主机械体/上连臂:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0471976]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("主机械体/下连臂:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.0471976]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("主机械体/上连臂/上捆弦臂:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.2617994]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("主机械体/下连臂/下捆弦臂:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.2617994]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("主机械体/弓弦:points")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-57, -99, -57, -16, -57, 67)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("子弹生成器:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:material:shader_parameter/mode")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:material:shader_parameter/progress")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("主机械体/弓弦:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("字灵节点/弓:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("字灵节点/长:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("字灵节点/张:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bfdm2"]
+resource_name = "启用动画"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/mode")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("主机械体/弓弦:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fgp3f"]
+resource_name = "射箭动画"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("主机械体/上连臂:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5235988, 1.0471976]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("主机械体/下连臂:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5235988, -1.0471976]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("主机械体/上连臂/上捆弦臂:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5235988, -0.2617994]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("主机械体/下连臂/下捆弦臂:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5235988, 0.2617994]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("主机械体/弓弦:points")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedVector2Array(-76, -67, -107, -16, -76, 35), PackedVector2Array(-57, -99, -57, -16, -57, 67)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("子弹生成器:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-50, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wkwoi"]
+resource_name = "字灵动画"
+length = 6.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("字灵节点/弓:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("字灵节点/长:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 2.2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("字灵节点/张:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4, 4.2000003, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wyc1c"]
+resource_name = "拉弦动画"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("主机械体/上连臂:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [1.0471976, 0.5235987755982988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("主机械体/下连臂:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [-1.0471976, -0.5235988]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("主机械体/上连臂/上捆弦臂:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [-0.2617994, -0.5235988]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("主机械体/下连臂/下捆弦臂:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [0.2617994, 0.5235988]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("主机械体/弓弦:points")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [PackedVector2Array(-57, -99, -57, -16, -57, 67), PackedVector2Array(-76, -67, -107, -16, -76, 35)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("子弹生成器:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-50, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2ahee"]
+_data = {
+&"RESET": SubResource("Animation_2ahee"),
+&"启用动画": SubResource("Animation_bfdm2"),
+&"射箭动画": SubResource("Animation_fgp3f"),
+&"弓_长_张字灵显圣动画": SubResource("Animation_wkwoi"),
+&"拉弓动画": SubResource("Animation_wyc1c")
+}
+
+[node name="张装置" type="Node2D" unique_id=788237722]
+z_index = 1
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_fgp3f")
+
+[node name="主机械体" type="Sprite2D" parent="." unique_id=1396927386]
+use_parent_material = true
+texture = SubResource("AtlasTexture_50e1a")
+
+[node name="上连臂" type="Sprite2D" parent="主机械体" unique_id=486374389]
+use_parent_material = true
+position = Vector2(-8, -24)
+rotation = 1.0471976
+texture = SubResource("AtlasTexture_wyc1c")
+offset = Vector2(-24, 0)
+
+[node name="上捆弦臂" type="Sprite2D" parent="主机械体/上连臂" unique_id=1856402658]
+use_parent_material = true
+position = Vector2(-48, 0)
+rotation = -0.2617994
+texture = SubResource("AtlasTexture_fgp3f")
+offset = Vector2(-16, 0)
+
+[node name="捆线臂转轴" type="Sprite2D" parent="主机械体/上连臂" unique_id=612974666]
+use_parent_material = true
+position = Vector2(-48, 0)
+texture = SubResource("AtlasTexture_2ahee")
+
+[node name="上连臂转轴" type="Sprite2D" parent="主机械体" unique_id=248623109]
+use_parent_material = true
+position = Vector2(-7, -23)
+texture = SubResource("AtlasTexture_2ahee")
+
+[node name="下连臂" type="Sprite2D" parent="主机械体" unique_id=1442288562]
+use_parent_material = true
+position = Vector2(-8, 24)
+rotation = -1.0471976
+texture = SubResource("AtlasTexture_wyc1c")
+offset = Vector2(-24, 0)
+flip_v = true
+
+[node name="下捆弦臂" type="Sprite2D" parent="主机械体/下连臂" unique_id=945840536]
+use_parent_material = true
+position = Vector2(-48, 0)
+rotation = 0.2617994
+texture = SubResource("AtlasTexture_fgp3f")
+offset = Vector2(-16, 0)
+
+[node name="捆线臂转轴" type="Sprite2D" parent="主机械体/下连臂" unique_id=71853369]
+use_parent_material = true
+position = Vector2(-48, 0)
+texture = SubResource("AtlasTexture_2ahee")
+
+[node name="下连臂转轴" type="Sprite2D" parent="主机械体" unique_id=1795184502]
+use_parent_material = true
+position = Vector2(-7, 23)
+texture = SubResource("AtlasTexture_2ahee")
+
+[node name="弓弦" type="Line2D" parent="主机械体" unique_id=1468583663]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(12, 16)
+points = PackedVector2Array(-57, -99, -57, -16, -57, 67)
+width = 2.0
+
+[node name="子弹生成器" type="Marker2D" parent="." unique_id=1776659956]
+
+[node name="字灵节点" type="Node2D" parent="." unique_id=1701896984]
+z_index = 10
+
+[node name="弓" type="Sprite2D" parent="字灵节点" unique_id=487712530]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("4_em7mw")
+
+[node name="长" type="Sprite2D" parent="字灵节点" unique_id=667634674]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("5_wkwoi")
+
+[node name="张" type="Sprite2D" parent="字灵节点" unique_id=1783981459]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("6_rraxe")
+
+[node name="装置动画机" type="AnimationPlayer" parent="." unique_id=1275782345]
+libraries/ = SubResource("AnimationLibrary_2ahee")

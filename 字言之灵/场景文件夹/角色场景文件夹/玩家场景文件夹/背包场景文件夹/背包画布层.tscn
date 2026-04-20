@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://cvpgibgld2ubo"]
+
+[ext_resource type="Texture2D" uid="uid://ct68vaoncewn1" path="res://图片文件夹/功能型工具图片文件夹/背包UI图片文件夹/背包面板UI图片.png" id="1_fdbes"]
+[ext_resource type="Script" uid="uid://ca6hk2hhcnxv5" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/背包UI脚本文件夹/背包画布层脚本.cs" id="1_gjutt"]
+[ext_resource type="Texture2D" uid="uid://dhtotm8scv5yt" path="res://图片文件夹/功能型工具图片文件夹/背包UI图片文件夹/背包_杂物按钮图片.png" id="1_lxxd2"]
+[ext_resource type="Texture2D" uid="uid://cat4gbyoerxv5" path="res://图片文件夹/功能型工具图片文件夹/背包UI图片文件夹/背包_重要物品按钮图片.png" id="2_74rcu"]
+[ext_resource type="Texture2D" uid="uid://d1r5tq78olhr7" path="res://图片文件夹/功能型工具图片文件夹/背包UI图片文件夹/背包_卡牌按钮图片.png" id="3_uw383"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="5_mqyf7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83mlv"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjutt"]
+bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0x7m"]
+atlas = ExtResource("5_mqyf7")
+region = Rect2(128, 48, 16, 16)
+
+[node name="背包画布层" type="CanvasLayer" unique_id=1737993657]
+visible = false
+script = ExtResource("1_gjutt")
+
+[node name="背包" type="Control" parent="." unique_id=898836686]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.0
+offset_top = -243.0
+offset_right = 432.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="背包总HBox" type="HBoxContainer" parent="背包" unique_id=313509931]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="背包按钮VBox" type="VBoxContainer" parent="背包/背包总HBox" unique_id=1396329426]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="杂物按钮" type="TextureButton" parent="背包/背包总HBox/背包按钮VBox" unique_id=2082463754]
+custom_minimum_size = Vector2(0, 124)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_lxxd2")
+stretch_mode = 0
+
+[node name="重要物品按钮" type="TextureButton" parent="背包/背包总HBox/背包按钮VBox" unique_id=1138383361]
+modulate = Color(0.4509804, 0.4509804, 0.4509804, 1)
+custom_minimum_size = Vector2(0, 124)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_74rcu")
+stretch_mode = 0
+
+[node name="卡牌按钮" type="TextureButton" parent="背包/背包总HBox/背包按钮VBox" unique_id=1482088977]
+modulate = Color(0.4509804, 0.4509804, 0.4509804, 1)
+custom_minimum_size = Vector2(0, 124)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_uw383")
+stretch_mode = 0
+
+[node name="背包MC" type="MarginContainer" parent="背包/背包总HBox" unique_id=928371120]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="背包背景" type="TextureRect" parent="背包/背包总HBox/背包MC" unique_id=1112996609]
+layout_mode = 2
+texture = ExtResource("1_fdbes")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="背包/背包总HBox/背包MC" unique_id=1355987734]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="搜索栏MC" type="MarginContainer" parent="背包/背包总HBox/背包MC/VBoxContainer" unique_id=532101474]
+visible = false
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 12
+
+[node name="Panel" type="Panel" parent="背包/背包总HBox/背包MC/VBoxContainer/搜索栏MC" unique_id=1596719287]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_83mlv")
+
+[node name="搜索栏HBox" type="HBoxContainer" parent="背包/背包总HBox/背包MC/VBoxContainer/搜索栏MC" unique_id=1950171667]
+layout_mode = 2
+
+[node name="搜索标签" type="Label" parent="背包/背包总HBox/背包MC/VBoxContainer/搜索栏MC/搜索栏HBox" unique_id=1211431017]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "搜索："
+horizontal_alignment = 1
+
+[node name="搜索输入栏" type="LineEdit" parent="背包/背包总HBox/背包MC/VBoxContainer/搜索栏MC/搜索栏HBox" unique_id=1315811254]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_gjutt")
+placeholder_text = "请输入物品名"
+
+[node name="搜索按钮" type="Button" parent="背包/背包总HBox/背包MC/VBoxContainer/搜索栏MC/搜索栏HBox" unique_id=1488171961]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "搜索"
+
+[node name="槽位SC" type="ScrollContainer" parent="背包/背包总HBox/背包MC/VBoxContainer" unique_id=1035096625]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="槽位MC" type="MarginContainer" parent="背包/背包总HBox/背包MC/VBoxContainer/槽位SC" unique_id=666573863]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="槽位GC" type="GridContainer" parent="背包/背包总HBox/背包MC/VBoxContainer/槽位SC/槽位MC" unique_id=1796128507]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 14
+
+[node name="背包关闭按钮" type="Button" parent="背包" unique_id=1723982952]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_bottom = 32.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_f0x7m")
+icon_alignment = 1
+expand_icon = true

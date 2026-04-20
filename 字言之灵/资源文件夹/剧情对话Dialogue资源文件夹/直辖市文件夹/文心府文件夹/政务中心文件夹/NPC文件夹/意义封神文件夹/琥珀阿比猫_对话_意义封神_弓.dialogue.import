@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cp3ersoclc7b0"
+path="res://.godot/imported/琥珀阿比猫_对话_意义封神_弓.dialogue-74e72d02e0b2c33a631f2ea9155ccd29.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/NPC文件夹/意义封神文件夹/琥珀阿比猫_对话_意义封神_弓.dialogue"
+dest_files=["res://.godot/imported/琥珀阿比猫_对话_意义封神_弓.dialogue-74e72d02e0b2c33a631f2ea9155ccd29.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://roku4lox2s2j"]
+
+[ext_resource type="PackedScene" uid="uid://bp3bcwpny3u8v" path="res://场景文件夹/主场景文件夹/战斗界面场景文件夹/手牌区场景文件夹/手牌区基类场景.tscn" id="1_r3k7v"]
+[ext_resource type="Texture2D" uid="uid://dr78ybgrdpr54" path="res://图片文件夹/主界面图片文件夹/战斗界面图片文件夹/战斗界面控件精灵表.png" id="1_v7il4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpupd"]
+atlas = ExtResource("1_v7il4")
+region = Rect2(416, 0, 400, 120)
+
+[node name="合纵方手牌区" unique_id=741897543 instance=ExtResource("1_r3k7v")]
+size_flags_vertical = 1
+
+[node name="手牌区背景" type="TextureRect" parent="总HBox/二级容器" index="0" unique_id=601791325]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_bpupd")
+
+[node name="按钮容器" parent="总HBox" index="1"]
+size_flags_vertical = 0
+
+[node name="出牌按钮" parent="总HBox/按钮容器" index="0"]
+size_flags_vertical = 8

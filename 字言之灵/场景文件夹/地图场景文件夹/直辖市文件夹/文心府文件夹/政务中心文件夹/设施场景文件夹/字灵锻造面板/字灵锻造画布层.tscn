@@ -1,0 +1,610 @@
+[gd_scene format=3 uid="uid://b8iqy0lh0r8tv"]
+
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="1_1rncb"]
+[ext_resource type="Script" uid="uid://cpg3yayl41hdm" path="res://脚本文件夹/地图脚本文件夹脚本/可交互体脚本文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/面板型可交互体文件夹/字灵锻造画布层脚本.cs" id="1_a0llf"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="3_sqv70"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwjbu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0llf"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_1rncb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rncb"]
+
+[sub_resource type="FontFile" id="FontFile_1rncb"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+
+[sub_resource type="FontFile" id="FontFile_a0llf"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldpbj"]
+atlas = ExtResource("3_sqv70")
+region = Rect2(128, 48, 16, 16)
+
+[node name="字灵锻造画布层" type="CanvasLayer" unique_id=1594066350]
+script = ExtResource("1_a0llf")
+
+[node name="Control" type="Control" parent="." unique_id=287463609]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="选择字灵MC" type="MarginContainer" parent="Control" unique_id=307231115]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/选择字灵MC" unique_id=1696783214]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fwjbu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/选择字灵MC/Panel" unique_id=2047929494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/选择字灵MC/Panel/VBoxContainer" unique_id=620189170]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "选择你所需要参与测试的字灵"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/选择字灵MC/Panel/VBoxContainer" unique_id=832954517]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Control/选择字灵MC/Panel/VBoxContainer/MarginContainer" unique_id=2125154628]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/选择字灵MC/Panel/VBoxContainer/MarginContainer" unique_id=624480096]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="选择字灵GC" type="GridContainer" parent="Control/选择字灵MC/Panel/VBoxContainer/MarginContainer/ScrollContainer" unique_id=199985829]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 11
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/选择字灵MC/Panel/VBoxContainer" unique_id=1971194004]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="选择字灵下一步按钮" type="Button" parent="Control/选择字灵MC/Panel/VBoxContainer/HBoxContainer" unique_id=788489884]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "下一步"
+
+[node name="基石构建MC" type="MarginContainer" parent="Control" unique_id=137869913]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/基石构建MC" unique_id=2006329509]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a0llf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/基石构建MC/Panel" unique_id=1085955164]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/基石构建MC/Panel/VBoxContainer" unique_id=392286039]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "基石构建"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/基石构建MC/Panel/VBoxContainer" unique_id=652426446]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer" unique_id=1324511005]
+layout_mode = 2
+
+[node name="笔画进度Panel" type="Panel" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1882150374]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画进度Panel" unique_id=1909927869]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画进度Panel/VBoxContainer" unique_id=1583532165]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Panel" type="Panel" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画进度Panel/VBoxContainer/MarginContainer" unique_id=1713290882]
+layout_mode = 2
+
+[node name="基石构建选字标签" type="Label" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画进度Panel/VBoxContainer/MarginContainer" unique_id=690171918]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 100
+text = "勾"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画进度Panel/VBoxContainer" unique_id=441557107]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画进度Panel/VBoxContainer/MarginContainer2" unique_id=645259901]
+layout_mode = 2
+
+[node name="笔画进度GC" type="GridContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画进度Panel/VBoxContainer/MarginContainer2/ScrollContainer" unique_id=568941954]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="笔画块Panel" type="Panel" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1003655475]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画块Panel" unique_id=1896608239]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画块Panel/MarginContainer" unique_id=279762833]
+layout_mode = 2
+
+[node name="笔画块GC" type="GridContainer" parent="Control/基石构建MC/Panel/VBoxContainer/MarginContainer/HBoxContainer/笔画块Panel/MarginContainer/ScrollContainer" unique_id=1288027098]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/基石构建MC/Panel/VBoxContainer" unique_id=291523197]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="基石构建按钮" type="Button" parent="Control/基石构建MC/Panel/VBoxContainer/HBoxContainer" unique_id=432422827]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "筑基巩固"
+
+[node name="基石构建重选按钮" type="Button" parent="Control/基石构建MC/Panel/VBoxContainer/HBoxContainer" unique_id=1984640492]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "重选字灵"
+
+[node name="言灵锚定MC" type="MarginContainer" parent="Control" unique_id=976764012]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="拼音播放器" type="AudioStreamPlayer" parent="Control/言灵锚定MC" unique_id=1026385050]
+unique_name_in_owner = true
+
+[node name="录音器" type="AudioStreamPlayer" parent="Control/言灵锚定MC" unique_id=1945914216]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamMicrophone_1rncb")
+bus = &"Record"
+
+[node name="Panel" type="Panel" parent="Control/言灵锚定MC" unique_id=2081033699]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1rncb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/言灵锚定MC/Panel" unique_id=923216231]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/言灵锚定MC/Panel/VBoxContainer" unique_id=994295940]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "言灵锚定"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/言灵锚定MC/Panel/VBoxContainer" unique_id=919158326]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Control/言灵锚定MC/Panel/VBoxContainer/MarginContainer" unique_id=2044255926]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/言灵锚定MC/Panel/VBoxContainer/MarginContainer" unique_id=1271919787]
+layout_mode = 2
+
+[node name="言灵锚定拼音按钮" type="Button" parent="Control/言灵锚定MC/Panel/VBoxContainer/MarginContainer/VBoxContainer" unique_id=720508843]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = SubResource("FontFile_1rncb")
+theme_override_font_sizes/font_size = 64
+text = "🔉gōu"
+
+[node name="言灵锚定选字标签" type="Label" parent="Control/言灵锚定MC/Panel/VBoxContainer/MarginContainer/VBoxContainer" unique_id=42967724]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 180
+text = "勾"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/言灵锚定MC/Panel/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1742208757]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="言灵锚定录音按钮" type="Button" parent="Control/言灵锚定MC/Panel/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1270002281]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 64
+text = "🎙入言"
+
+[node name="言灵锚定拼音LE" type="LineEdit" parent="Control/言灵锚定MC/Panel/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1221798539]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("FontFile_a0llf")
+theme_override_font_sizes/font_size = 36
+placeholder_text = "您当前的言灵……"
+alignment = 1
+editable = false
+
+[node name="言灵锚定停录按钮" type="Button" parent="Control/言灵锚定MC/Panel/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1498811032]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 64
+disabled = true
+text = "⏹️锚定"
+
+[node name="言灵锚定重选按钮" type="Button" parent="Control/言灵锚定MC/Panel/VBoxContainer" unique_id=1638925563]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "重选字灵"
+
+[node name="意义封神MC" type="MarginContainer" parent="Control" unique_id=1240085185]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/意义封神MC" unique_id=2115424793]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1rncb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/意义封神MC/Panel" unique_id=1784886405]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/意义封神MC/Panel/VBoxContainer" unique_id=347421092]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "意义封神"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/意义封神MC/Panel/VBoxContainer" unique_id=808423890]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Control/意义封神MC/Panel/VBoxContainer/MarginContainer" unique_id=92949464]
+layout_mode = 2
+
+[node name="意义封神选字标签" type="Label" parent="Control/意义封神MC/Panel/VBoxContainer/MarginContainer" unique_id=1481116527]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 180
+text = "勾"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/意义封神MC/Panel/VBoxContainer" unique_id=1582037903]
+layout_mode = 2
+
+[node name="誓言命定MC" type="MarginContainer" parent="Control" unique_id=2087644826]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/誓言命定MC" unique_id=1441228458]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1rncb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/誓言命定MC/Panel" unique_id=369225116]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/誓言命定MC/Panel/VBoxContainer" unique_id=941395967]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "誓言命定"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/誓言命定MC/Panel/VBoxContainer" unique_id=1208023807]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Control/誓言命定MC/Panel/VBoxContainer/MarginContainer" unique_id=100453351]
+layout_mode = 2
+
+[node name="誓言命定选字标签" type="Label" parent="Control/誓言命定MC/Panel/VBoxContainer/MarginContainer" unique_id=1286808227]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 180
+text = "勾"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="誓言命定LE" type="LineEdit" parent="Control/誓言命定MC/Panel/VBoxContainer/MarginContainer" unique_id=415904749]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+placeholder_text = "写一句带有该字的帅气句子……包括标点符号，只能16个字哦"
+alignment = 1
+max_length = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/誓言命定MC/Panel/VBoxContainer" unique_id=81294906]
+layout_mode = 2
+
+[node name="誓言命定按钮" type="Button" parent="Control/誓言命定MC/Panel/VBoxContainer/HBoxContainer" unique_id=1005291302]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "热忱宣誓"
+
+[node name="提醒Panel" type="Panel" parent="Control" unique_id=24721107]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -140.0
+offset_right = 270.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="Control/提醒Panel" unique_id=452461716]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "·警告·"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="Control/提醒Panel" unique_id=724304927]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 36
+text = "您确定要退出吗？您当前的进度将会消失！"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/提醒Panel" unique_id=876932036]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="确认退出按钮" type="Button" parent="Control/提醒Panel/HBoxContainer" unique_id=1089257158]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 32
+text = "确认"
+
+[node name="返回测试按钮" type="Button" parent="Control/提醒Panel/HBoxContainer" unique_id=229017907]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_1rncb")
+theme_override_font_sizes/font_size = 32
+text = "返回"
+
+[node name="关闭面板按钮" type="Button" parent="Control" unique_id=619322341]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_ldpbj")
+expand_icon = true
+
+[node name="遮挡Panel" type="Panel" parent="Control" unique_id=1668355264]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

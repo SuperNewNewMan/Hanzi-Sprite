@@ -1,0 +1,312 @@
+[gd_scene format=3 uid="uid://dsphx68qqxn8w"]
+
+[ext_resource type="Texture2D" uid="uid://dr78ybgrdpr54" path="res://图片文件夹/主界面图片文件夹/战斗界面图片文件夹/战斗界面控件精灵表.png" id="1_56t2h"]
+[ext_resource type="Script" uid="uid://ljugl0r2jdhb" path="res://脚本文件夹/主场景脚本文件夹/战斗界面脚本文件夹/前端脚本文件夹/战斗_棋盘前端数据脚本.cs" id="1_qxfmk"]
+[ext_resource type="Texture2D" uid="uid://b0j82ktkhpkfq" path="res://icon.svg" id="1_wa6rk"]
+[ext_resource type="PackedScene" uid="uid://roku4lox2s2j" path="res://场景文件夹/主场景文件夹/战斗界面场景文件夹/手牌区场景文件夹/合纵方手牌区.tscn" id="2_8c08p"]
+[ext_resource type="PackedScene" uid="uid://s6w6fd0ma24a" path="res://场景文件夹/主场景文件夹/战斗界面场景文件夹/奕士ui场景文件夹/合纵方基础属性控件.tscn" id="2_oa4hd"]
+[ext_resource type="PackedScene" uid="uid://cfrekb4obithl" path="res://场景文件夹/主场景文件夹/战斗界面场景文件夹/手牌区场景文件夹/连横方手牌区.tscn" id="3_0ujbx"]
+[ext_resource type="PackedScene" uid="uid://qpms4535woil" path="res://场景文件夹/主场景文件夹/战斗界面场景文件夹/奕士ui场景文件夹/连横方基础属性控件.tscn" id="3_1xb72"]
+[ext_resource type="Texture2D" uid="uid://dhdh7e3jck70y" path="res://图片文件夹/主界面图片文件夹/战斗界面图片文件夹/奕士信息UI精灵表.png" id="5_oa4hd"]
+[ext_resource type="Script" uid="uid://3xcwp23fhoo7" path="res://脚本文件夹/主场景脚本文件夹/战斗界面脚本文件夹/后端脚本文件夹/战斗后端节点脚本.cs" id="10_s55sa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6kno"]
+atlas = ExtResource("1_56t2h")
+region = Rect2(832, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4q48"]
+atlas = ExtResource("1_56t2h")
+region = Rect2(0, 0, 400, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa4hd"]
+atlas = ExtResource("1_56t2h")
+region = Rect2(0, 136, 400, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxfmk"]
+atlas = ExtResource("1_56t2h")
+region = Rect2(832, 136, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_815b8"]
+atlas = ExtResource("5_oa4hd")
+region = Rect2(64, 80, 128, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xb72"]
+bg_color = Color(0.31431612, 0.31431612, 0.31431603, 0.5882353)
+
+[node name="战斗界面" type="Control" unique_id=1438226434]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxfmk")
+
+[node name="场地背景" type="TextureRect" parent="." unique_id=96711189]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wa6rk")
+
+[node name="回合倒计时Timer" type="Timer" parent="." unique_id=1613063415]
+wait_time = 240.0
+
+[node name="回合倒计时Label" type="Label" parent="回合倒计时Timer" unique_id=507398726]
+modulate = Color(1, 1, 1, 0.7058824)
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -20.0
+offset_right = 66.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 36
+text = "倒计时"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="双方对阵区" type="MarginContainer" parent="." unique_id=2144289809]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -204.0
+offset_right = 576.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="双方对阵区" unique_id=474388973]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="场地" type="MarginContainer" parent="双方对阵区/HBoxContainer" unique_id=1739882366]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="场地背景" type="TextureRect" parent="双方对阵区/HBoxContainer/场地" unique_id=1976892300]
+modulate = Color(1, 1, 1, 0.5882353)
+custom_minimum_size = Vector2(160, 240)
+layout_mode = 2
+texture = SubResource("AtlasTexture_j6kno")
+
+[node name="双方出牌区" type="MarginContainer" parent="双方对阵区/HBoxContainer" unique_id=2031906079]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="双方对阵区/HBoxContainer/双方出牌区" unique_id=724572298]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="合纵方出牌区" type="MarginContainer" parent="双方对阵区/HBoxContainer/双方出牌区/VBoxContainer" unique_id=990875967]
+layout_mode = 2
+
+[node name="出牌区背景" type="TextureRect" parent="双方对阵区/HBoxContainer/双方出牌区/VBoxContainer/合纵方出牌区" unique_id=2022863498]
+modulate = Color(1, 1, 1, 0.5882353)
+custom_minimum_size = Vector2(824, 202)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_l4q48")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="双方对阵区/HBoxContainer/双方出牌区/VBoxContainer/合纵方出牌区" unique_id=715395022]
+layout_mode = 2
+
+[node name="合纵方出牌区HBox" type="HBoxContainer" parent="双方对阵区/HBoxContainer/双方出牌区/VBoxContainer/合纵方出牌区/ScrollContainer" unique_id=709272986]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="连横方出牌区" type="MarginContainer" parent="双方对阵区/HBoxContainer/双方出牌区/VBoxContainer" unique_id=1448333048]
+layout_mode = 2
+
+[node name="出牌区背景" type="TextureRect" parent="双方对阵区/HBoxContainer/双方出牌区/VBoxContainer/连横方出牌区" unique_id=144347250]
+modulate = Color(1, 1, 1, 0.5882353)
+custom_minimum_size = Vector2(824, 202)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_oa4hd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="双方对阵区/HBoxContainer/双方出牌区/VBoxContainer/连横方出牌区" unique_id=433426239]
+layout_mode = 2
+
+[node name="连横方出牌区HBox" type="HBoxContainer" parent="双方对阵区/HBoxContainer/双方出牌区/VBoxContainer/连横方出牌区/ScrollContainer" unique_id=1278307144]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="情景" type="MarginContainer" parent="双方对阵区/HBoxContainer" unique_id=1441584959]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="情景背景" type="TextureRect" parent="双方对阵区/HBoxContainer/情景" unique_id=126933233]
+modulate = Color(1, 1, 1, 0.5882353)
+custom_minimum_size = Vector2(160, 240)
+layout_mode = 2
+texture = SubResource("AtlasTexture_qxfmk")
+
+[node name="合纵方手牌区总HBox" type="HBoxContainer" parent="." unique_id=115498891]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="合纵方手牌区" parent="合纵方手牌区总HBox" unique_id=843154393 instance=ExtResource("2_8c08p")]
+visible = false
+layout_mode = 2
+
+[node name="连横方手牌区总HBox" type="HBoxContainer" parent="." unique_id=1587712536]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="连横方手牌区" parent="连横方手牌区总HBox" unique_id=2060025489 instance=ExtResource("3_0ujbx")]
+visible = false
+layout_mode = 2
+
+[node name="合纵方基础属性控件总VBox" type="VBoxContainer" parent="." unique_id=771937847]
+layout_mode = 1
+offset_right = 340.0
+offset_bottom = 112.0
+
+[node name="合纵方基础属性控件" parent="合纵方基础属性控件总VBox" unique_id=1362132668 instance=ExtResource("2_oa4hd")]
+visible = false
+layout_mode = 2
+
+[node name="合纵方基础属性控件2" parent="合纵方基础属性控件总VBox" unique_id=1748829143 instance=ExtResource("2_oa4hd")]
+visible = false
+layout_mode = 2
+
+[node name="连横方基础属性控件总VBox" type="VBoxContainer" parent="." unique_id=9098908]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -112.0
+offset_right = 340.0
+grow_vertical = 0
+
+[node name="连横方基础属性控件" parent="连横方基础属性控件总VBox" unique_id=1422734471 instance=ExtResource("3_1xb72")]
+visible = false
+layout_mode = 2
+
+[node name="连横方基础属性控件2" parent="连横方基础属性控件总VBox" unique_id=1442391854 instance=ExtResource("3_1xb72")]
+visible = false
+layout_mode = 2
+
+[node name="临阵脱逃按钮" type="Button" parent="." unique_id=535672698]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -192.0
+offset_bottom = 52.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 24
+text = "临阵脱逃"
+icon = SubResource("AtlasTexture_815b8")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="结束回合按钮" type="Button" parent="." unique_id=765397362]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -52.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 24
+text = "结束回合"
+icon = SubResource("AtlasTexture_815b8")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="逃跑提示Panel" type="Panel" parent="." unique_id=386737483]
+visible = false
+custom_minimum_size = Vector2(360, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1xb72")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="逃跑提示Panel" unique_id=2073602731]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="逃跑提示Panel/VBoxContainer" unique_id=477524242]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+text = "您确认要逃跑吗？这将视作一次失败！"
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="逃跑提示Panel/VBoxContainer" unique_id=1806892899]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 36
+
+[node name="逃跑确认按钮" type="Button" parent="逃跑提示Panel/VBoxContainer/HBoxContainer" unique_id=20134954]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+text = "是"
+
+[node name="逃跑取消按钮" type="Button" parent="逃跑提示Panel/VBoxContainer/HBoxContainer" unique_id=1912344915]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+text = "否"
+
+[node name="战斗后端节点" type="Node" parent="." unique_id=1225333657]
+script = ExtResource("10_s55sa")

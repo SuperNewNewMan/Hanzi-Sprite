@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bqt7hc38i34fs"]
+
+[ext_resource type="Texture2D" uid="uid://bla455xuc76q" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/瓦片图片文件夹/政务中心瓦片精灵表.png" id="1_gss6e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3aw2"]
+atlas = ExtResource("1_gss6e")
+region = Rect2(384, 16, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kdyi"]
+atlas = ExtResource("1_gss6e")
+region = Rect2(432, 16, 32, 32)
+
+[sub_resource type="Animation" id="Animation_52it2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("心脏:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("叉叉:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gss6e"]
+resource_name = "壁雕注水动画"
+length = 2.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("心脏:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("叉叉:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_52it2"]
+_data = {
+&"RESET": SubResource("Animation_52it2"),
+&"壁雕注水动画": SubResource("Animation_gss6e")
+}
+
+[node name="壁雕文装置" type="Node2D" unique_id=1993387079]
+
+[node name="心脏" type="Sprite2D" parent="." unique_id=1750619080]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-240, 0)
+texture = SubResource("AtlasTexture_a3aw2")
+
+[node name="叉叉" type="Sprite2D" parent="." unique_id=97220018]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(240, 0)
+texture = SubResource("AtlasTexture_3kdyi")
+
+[node name="装置动画机" type="AnimationPlayer" parent="." unique_id=1327663607]
+libraries/ = SubResource("AnimationLibrary_52it2")

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bkitqs74e4gum"]
+
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="1_t3abu"]
+[ext_resource type="FontFile" uid="uid://c40jgy7d0n542" path="res://字体文件夹/BoutiqueBitmap9x9_1.92.ttf" id="2_3c2q7"]
+
+[node name="选择字灵按钮" type="Button" unique_id=973696774]
+z_index = 2
+custom_minimum_size = Vector2(100, 100)
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_t3abu")
+theme_override_font_sizes/font_size = 48
+toggle_mode = true
+
+[node name="数量标签" type="Label" parent="." unique_id=946514951]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_3c2q7")
+theme_override_font_sizes/font_size = 20
+text = "1"

@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://dmqfladsjx0su"]
+
+[ext_resource type="Texture2D" uid="uid://bla455xuc76q" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/瓦片图片文件夹/政务中心瓦片精灵表.png" id="1_62tqh"]
+[ext_resource type="Shader" uid="uid://cricx47vsvg5r" path="res://Shader文件夹/特效Shader/着色器文件夹/像素化消散特效着色器.gdshader" id="1_itm4c"]
+[ext_resource type="Texture2D" uid="uid://drmdas63hq6ud" path="res://图片文件夹/物品图片文件夹/卡牌图片文件夹/汉字图片文件夹/sh声母/i韵母/市_shi_4.png" id="3_d3up7"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q8d1y"]
+frequency = 0.1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8rwge"]
+noise = SubResource("FastNoiseLite_q8d1y")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d3up7"]
+shader = ExtResource("1_itm4c")
+shader_parameter/mode = 1
+shader_parameter/progress = 0.0
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+shader_parameter/noise_offset = 0.01
+shader_parameter/grid_size = 48.0
+shader_parameter/edge_power = 36.0
+shader_parameter/PerlinNoise = SubResource("NoiseTexture2D_8rwge")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50e1a"]
+atlas = ExtResource("1_62tqh")
+region = Rect2(288, 272, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdxt1"]
+atlas = ExtResource("1_62tqh")
+region = Rect2(352, 224, 144, 160)
+
+[sub_resource type="Animation" id="Animation_itm4c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("自助铜板售货机节点:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("字灵节点/市:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_62tqh"]
+resource_name = "启用动画"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("自助铜板售货机节点:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_d3up7"]
+resource_name = "字灵动画"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("字灵节点/市:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_itm4c"]
+_data = {
+&"RESET": SubResource("Animation_itm4c"),
+&"启用动画": SubResource("Animation_62tqh"),
+&"市字灵显圣动画": SubResource("Animation_d3up7")
+}
+
+[node name="市装置" type="Node2D" unique_id=82220848]
+material = SubResource("ShaderMaterial_d3up7")
+
+[node name="自助铜板售货机节点" type="Node2D" parent="." unique_id=1759005438]
+modulate = Color(1, 1, 1, 0)
+use_parent_material = true
+position = Vector2(24, -33)
+
+[node name="自助铜板售货机" type="Sprite2D" parent="自助铜板售货机节点" unique_id=1438903958]
+use_parent_material = true
+texture = SubResource("AtlasTexture_50e1a")
+
+[node name="店面节点" type="Node2D" parent="." unique_id=697200781]
+use_parent_material = true
+position = Vector2(-17, -80)
+
+[node name="Sprite2D" type="Sprite2D" parent="店面节点" unique_id=1136552929]
+use_parent_material = true
+texture = SubResource("AtlasTexture_sdxt1")
+
+[node name="字灵节点" type="Node2D" parent="." unique_id=240233468]
+z_index = 10
+position = Vector2(-17, -80)
+
+[node name="市" type="Sprite2D" parent="字灵节点" unique_id=1390089355]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("3_d3up7")
+
+[node name="装置动画机" type="AnimationPlayer" parent="." unique_id=27633122]
+libraries/ = SubResource("AnimationLibrary_itm4c")

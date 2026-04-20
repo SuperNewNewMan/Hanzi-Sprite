@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cdwei2dpk20v4"
+path="res://.godot/imported/琥珀阿比猫_对话_誓言命定.dialogue-bff16b712829657d641e6246d2de2310.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/NPC文件夹/琥珀阿比猫_对话_誓言命定.dialogue"
+dest_files=["res://.godot/imported/琥珀阿比猫_对话_誓言命定.dialogue-bff16b712829657d641e6246d2de2310.tres"]
+
+[params]
+
+defaults=true

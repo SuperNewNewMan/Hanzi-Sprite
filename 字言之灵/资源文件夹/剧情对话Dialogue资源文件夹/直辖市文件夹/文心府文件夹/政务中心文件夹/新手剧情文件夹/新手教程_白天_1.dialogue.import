@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bwvaw72eci1lc"
+path="res://.godot/imported/新手教程_白天_1.dialogue-64ccbce2fa2db7e65570db4ff5bb2088.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/新手剧情文件夹/新手教程_白天_1.dialogue"
+dest_files=["res://.godot/imported/新手教程_白天_1.dialogue-64ccbce2fa2db7e65570db4ff5bb2088.tres"]
+
+[params]
+
+defaults=true

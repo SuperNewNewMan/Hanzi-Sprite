@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cwxyu25a4406e"
+path="res://.godot/imported/勾装置触发.dialogue-99f5364d52a876cc444fb2cdcf28bead.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/设施文件夹/勾装置触发.dialogue"
+dest_files=["res://.godot/imported/勾装置触发.dialogue-99f5364d52a876cc444fb2cdcf28bead.tres"]
+
+[params]
+
+defaults=true

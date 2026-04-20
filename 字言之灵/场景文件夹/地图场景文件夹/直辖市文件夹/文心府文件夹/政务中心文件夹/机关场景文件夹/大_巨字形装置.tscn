@@ -1,0 +1,580 @@
+[gd_scene format=3 uid="uid://cb8mae4mhdiwd"]
+
+[ext_resource type="Texture2D" uid="uid://bla455xuc76q" path="res://图片文件夹/地图图片文件夹/直辖市图片文件夹/文心府图片文件夹/政务中心图片文件夹/瓦片图片文件夹/政务中心瓦片精灵表.png" id="1_fnol2"]
+[ext_resource type="Shader" uid="uid://cricx47vsvg5r" path="res://Shader文件夹/特效Shader/着色器文件夹/像素化消散特效着色器.gdshader" id="1_r7f78"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q8d1y"]
+frequency = 0.1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8rwge"]
+noise = SubResource("FastNoiseLite_q8d1y")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ksuk5"]
+shader = ExtResource("1_r7f78")
+shader_parameter/mode = 1
+shader_parameter/progress = 0.0
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+shader_parameter/noise_offset = 0.01
+shader_parameter/grid_size = 40.0
+shader_parameter/edge_power = 28.0
+shader_parameter/PerlinNoise = SubResource("NoiseTexture2D_8rwge")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iestt"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(208, 144, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnol2"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(512, 248, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unwbw"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(560, 240, 16, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r7f78"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umsey"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(512, 248, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srxha"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(560, 272, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg4ea"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(352, 160, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbok2"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(408, 160, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s14cx"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(80, 240, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdguy"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(0, 224, 64, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nh2s"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(512, 248, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6cmf"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(576, 240, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdxt1"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(0, 352, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj6o2"]
+atlas = ExtResource("1_fnol2")
+region = Rect2(72, 280, 32, 32)
+
+[sub_resource type="Animation" id="Animation_r7f78"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("大字形装置/主机械体/箭头标靶:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("大字形装置/主机械体/展臂标靶:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("巨字形装置/旋转/主机械体/旋转标靶:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material:shader_parameter/progress")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("大字形装置/主机械体/箭头标靶/箭头监测区域:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("大字形装置/主机械体/箭头标靶/箭头监测区域:monitorable")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("大字形装置/主机械体/展臂标靶/展臂监测区域:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("大字形装置/主机械体/展臂标靶/展臂监测区域:monitorable")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("巨字形装置/旋转/主机械体/旋转标靶/旋转监测区域:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("巨字形装置/旋转/主机械体/旋转标靶/旋转监测区域:monitorable")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_j0fnv"]
+resource_name = "启用动画"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("大字形装置/主机械体/箭头标靶:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("大字形装置/主机械体/展臂标靶:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("巨字形装置/旋转/主机械体/旋转标靶:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material:shader_parameter/progress")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("大字形装置/主机械体/箭头标靶/箭头监测区域:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("大字形装置/主机械体/箭头标靶/箭头监测区域:monitorable")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("大字形装置/主机械体/展臂标靶/展臂监测区域:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("大字形装置/主机械体/展臂标靶/展臂监测区域:monitorable")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("巨字形装置/旋转/主机械体/旋转标靶/旋转监测区域:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("巨字形装置/旋转/主机械体/旋转标靶/旋转监测区域:monitorable")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r7f78"]
+_data = {
+&"RESET": SubResource("Animation_r7f78"),
+&"启用动画": SubResource("Animation_j0fnv")
+}
+
+[sub_resource type="Animation" id="Animation_fnol2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("大字形装置/主机械体/箭头标靶/箭头:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5.2453663e-07, -12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("大字形装置/主机械体/展臂标靶/展臂节点/左展臂:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("大字形装置/主机械体/展臂标靶/展臂节点/右展臂:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("巨字形装置/旋转/主机械体/旋转标靶/旋转:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_unwbw"]
+resource_name = "提示动画"
+length = 2.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("大字形装置/主机械体/箭头标靶/箭头:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.4, 1, 1),
+"update": 0,
+"values": [Vector2(5.2453663e-07, -12), Vector2(-18, -12.000001), Vector2(5.2453663e-07, -12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("大字形装置/主机械体/展臂标靶/展臂节点/左展臂:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.4, 1, 1),
+"update": 0,
+"values": [0.0, 0.3490658503988659, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("大字形装置/主机械体/展臂标靶/展臂节点/右展臂:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.4, 1, 1),
+"update": 0,
+"values": [0.0, -0.3490658503988659, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("巨字形装置/旋转/主机械体/旋转标靶/旋转:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.141592653589793, 6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_umsey"]
+_data = {
+&"RESET": SubResource("Animation_fnol2"),
+&"提示动画": SubResource("Animation_unwbw")
+}
+
+[node name="大_巨字形装置" type="Node2D" unique_id=358136841]
+z_index = 1
+material = SubResource("ShaderMaterial_ksuk5")
+
+[node name="大字形装置" type="Node2D" parent="." unique_id=707099451]
+use_parent_material = true
+
+[node name="主机械体" type="Sprite2D" parent="大字形装置" unique_id=320199456]
+use_parent_material = true
+texture = SubResource("AtlasTexture_iestt")
+
+[node name="箭头标靶" type="Sprite2D" parent="大字形装置/主机械体" unique_id=1239911091]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-95, 0)
+rotation = -1.5707964
+texture = SubResource("AtlasTexture_fnol2")
+
+[node name="箭头" type="Sprite2D" parent="大字形装置/主机械体/箭头标靶" unique_id=855722945]
+position = Vector2(5.2453663e-07, -12)
+rotation = 1.5707964
+texture = SubResource("AtlasTexture_unwbw")
+flip_v = true
+
+[node name="箭头监测区域" type="Area2D" parent="大字形装置/主机械体/箭头标靶" unique_id=1928851595]
+unique_name_in_owner = true
+position = Vector2(5.2453663e-07, -12)
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="大字形装置/主机械体/箭头标靶/箭头监测区域" unique_id=1140315745]
+shape = SubResource("CircleShape2D_r7f78")
+
+[node name="展臂标靶" type="Sprite2D" parent="大字形装置/主机械体" unique_id=1557077135]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(95, 0)
+rotation = 1.5707964
+texture = SubResource("AtlasTexture_umsey")
+
+[node name="展臂节点" type="Node2D" parent="大字形装置/主机械体/展臂标靶" unique_id=440315407]
+position = Vector2(-5.2453663e-07, -12)
+rotation = -1.5707964
+
+[node name="左展臂" type="Sprite2D" parent="大字形装置/主机械体/展臂标靶/展臂节点" unique_id=1930687351]
+texture = SubResource("AtlasTexture_srxha")
+offset = Vector2(-7, 10)
+
+[node name="右展臂" type="Sprite2D" parent="大字形装置/主机械体/展臂标靶/展臂节点" unique_id=1147290898]
+texture = SubResource("AtlasTexture_srxha")
+offset = Vector2(7, 10)
+flip_h = true
+
+[node name="展臂监测区域" type="Area2D" parent="大字形装置/主机械体/展臂标靶" unique_id=1259498155]
+unique_name_in_owner = true
+position = Vector2(5.2453663e-07, -12)
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="大字形装置/主机械体/展臂标靶/展臂监测区域" unique_id=1451326211]
+shape = SubResource("CircleShape2D_r7f78")
+
+[node name="机械臂节点" type="Node2D" parent="大字形装置" unique_id=1192717059]
+use_parent_material = true
+position = Vector2(0, 2)
+
+[node name="左臂" type="Sprite2D" parent="大字形装置/机械臂节点" unique_id=171432116]
+use_parent_material = true
+position = Vector2(0, 16)
+texture = SubResource("AtlasTexture_jg4ea")
+offset = Vector2(-20, 28)
+
+[node name="右臂" type="Sprite2D" parent="大字形装置/机械臂节点" unique_id=192812017]
+use_parent_material = true
+position = Vector2(0, 16)
+texture = SubResource("AtlasTexture_fbok2")
+offset = Vector2(20, 28)
+
+[node name="转轴" type="Sprite2D" parent="大字形装置/机械臂节点" unique_id=698546275]
+use_parent_material = true
+position = Vector2(0, 16)
+texture = SubResource("AtlasTexture_s14cx")
+
+[node name="巨字形装置" type="Node2D" parent="." unique_id=1803804099]
+use_parent_material = true
+position = Vector2(0, 88)
+
+[node name="旋转" type="Node2D" parent="巨字形装置" unique_id=1344568560]
+use_parent_material = true
+rotation = 1.5707964
+
+[node name="主机械体" type="Sprite2D" parent="巨字形装置/旋转" unique_id=742172469]
+use_parent_material = true
+position = Vector2(26.000004, -1.1364963e-06)
+texture = SubResource("AtlasTexture_sdguy")
+
+[node name="旋转标靶" type="Sprite2D" parent="巨字形装置/旋转/主机械体" unique_id=1185591134]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-49.000004, 1.9073486e-06)
+rotation = -1.5707964
+texture = SubResource("AtlasTexture_1nh2s")
+
+[node name="旋转" type="Sprite2D" parent="巨字形装置/旋转/主机械体/旋转标靶" unique_id=322828020]
+position = Vector2(-2.3450957e-07, -12.000004)
+texture = SubResource("AtlasTexture_d6cmf")
+
+[node name="旋转监测区域" type="Area2D" parent="巨字形装置/旋转/主机械体/旋转标靶" unique_id=357483684]
+unique_name_in_owner = true
+position = Vector2(5.2453663e-07, -12)
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="巨字形装置/旋转/主机械体/旋转标靶/旋转监测区域" unique_id=232751697]
+shape = SubResource("CircleShape2D_r7f78")
+
+[node name="一臂" type="Sprite2D" parent="巨字形装置/旋转" unique_id=1176524464]
+use_parent_material = true
+position = Vector2(2.0836658, -47)
+texture = SubResource("AtlasTexture_sdxt1")
+offset = Vector2(26.916338, 0)
+
+[node name="一轴承" type="Sprite2D" parent="巨字形装置/旋转" unique_id=1112879641]
+use_parent_material = true
+position = Vector2(2.0000036, -47)
+texture = SubResource("AtlasTexture_jj6o2")
+
+[node name="二臂" type="Sprite2D" parent="巨字形装置/旋转" unique_id=155417526]
+use_parent_material = true
+position = Vector2(1.8603115, 47)
+texture = SubResource("AtlasTexture_sdxt1")
+offset = Vector2(27.139692, 0)
+
+[node name="二轴承" type="Sprite2D" parent="巨字形装置/旋转" unique_id=1682091466]
+use_parent_material = true
+position = Vector2(2.000004, 47)
+texture = SubResource("AtlasTexture_jj6o2")
+
+[node name="装置动画机" type="AnimationPlayer" parent="." unique_id=1517722396]
+libraries/ = SubResource("AnimationLibrary_r7f78")
+
+[node name="提示动画机" type="AnimationPlayer" parent="." unique_id=1227278701]
+libraries/ = SubResource("AnimationLibrary_umsey")
+autoplay = &"提示动画"

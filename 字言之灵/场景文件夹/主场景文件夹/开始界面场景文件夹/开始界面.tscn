@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://ddnommw60w5o8"]
+
+[ext_resource type="Script" uid="uid://y56ewjxq1ljo" path="res://脚本文件夹/主场景脚本文件夹/开始界面脚本文件夹/开始界面背景脚本.cs" id="1_njat3"]
+[ext_resource type="FontFile" uid="uid://c40jgy7d0n542" path="res://字体文件夹/BoutiqueBitmap9x9_1.92.ttf" id="1_w8bku"]
+[ext_resource type="Texture2D" uid="uid://0w4wk275bqem" path="res://图片文件夹/主界面图片文件夹/开始界面图片文件夹/标题界面大幅度动态部分.png" id="2_75b6h"]
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="2_w8bku"]
+[ext_resource type="Texture2D" uid="uid://cmi4xfnfjjn0a" path="res://图片文件夹/主界面图片文件夹/开始界面图片文件夹/标题界面小幅度动态部分.png" id="3_dc7gm"]
+[ext_resource type="Script" uid="uid://xfqt52hs6g2q" path="res://脚本文件夹/主场景脚本文件夹/开始界面脚本文件夹/开始界面_按钮总容器脚本.cs" id="3_oj0u6"]
+[ext_resource type="Material" uid="uid://dasm4peqqs62b" path="res://Shader文件夹/字体Shader/材质文件夹/像素字_黑白渐变效果材质.tres" id="5_k540b"]
+[ext_resource type="Material" uid="uid://dav50eksjpw8n" path="res://Shader文件夹/字体Shader/材质文件夹/像素字_纯色描边效果材质.tres" id="7_7m2wx"]
+[ext_resource type="Material" uid="uid://b7qcee0kfdxou" path="res://Shader文件夹/字体Shader/材质文件夹/像素字_七彩渐变_灵气波动效果材质.tres" id="7_k540b"]
+[ext_resource type="PackedScene" uid="uid://b3ujypnmpjboe" path="res://场景文件夹/主场景文件夹/功能型工具场景文件夹/设置画布层.tscn" id="10_75b6h"]
+[ext_resource type="PackedScene" uid="uid://53hchgp33qx" path="res://场景文件夹/主场景文件夹/开始界面场景文件夹/创建角色画布层.tscn" id="10_dc7gm"]
+[ext_resource type="PackedScene" uid="uid://yc5ga1m0l5ge" path="res://场景文件夹/主场景文件夹/功能型工具场景文件夹/联机画布层.tscn" id="11_oj0u6"]
+[ext_resource type="PackedScene" uid="uid://k3qw2mv6587q" path="res://场景文件夹/主场景文件夹/功能型工具场景文件夹/存档画布层.tscn" id="12_oj0u6"]
+[ext_resource type="PackedScene" uid="uid://dle7bq2lsbdww" path="res://场景文件夹/主场景文件夹/开始界面场景文件夹/临时的登录系统画布层.tscn" id="14_dc7gm"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_dc7gm"]
+
+[sub_resource type="Animation" id="Animation_w8bku"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5qi0h"]
+resource_name = "界面渐变动画"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w8bku"]
+_data = {
+&"RESET": SubResource("Animation_w8bku"),
+&"界面渐变动画": SubResource("Animation_5qi0h")
+}
+
+[node name="开始界面" type="Control" unique_id=2088448597]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="背景容器" type="Node2D" parent="." unique_id=1034573493]
+position = Vector2(576, 324)
+script = ExtResource("1_njat3")
+
+[node name="大幅度动态部分" type="Sprite2D" parent="背景容器" unique_id=1725784319]
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("2_75b6h")
+
+[node name="小幅度动态部分" type="Sprite2D" parent="背景容器" unique_id=1520329567]
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("3_dc7gm")
+
+[node name="版本标签" type="Label" parent="." unique_id=382703749]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -18.0
+offset_right = 71.0
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_w8bku")
+theme_override_font_sizes/font_size = 16
+text = "测试版本：2026.0.1"
+vertical_alignment = 1
+
+[node name="声明标签" type="Label" parent="." unique_id=1166854136]
+layout_mode = 0
+offset_left = 963.0
+offset_top = 609.0
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_w8bku")
+theme_override_font_sizes/font_size = 16
+text = "By 牛牛黠
+毕设作品 始于2025.11.6"
+horizontal_alignment = 2
+
+[node name="主页面VBox" type="VBoxContainer" parent="." unique_id=1017485638]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="标题标签" type="Label" parent="主页面VBox" unique_id=404280647]
+material = ExtResource("5_k540b")
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("2_w8bku")
+theme_override_font_sizes/font_size = 108
+text = "字言之灵"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="当前版本主题HBox" type="HBoxContainer" parent="主页面VBox" unique_id=1037628217]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="左标签" type="Label" parent="主页面VBox/当前版本主题HBox" unique_id=379674421]
+material = ExtResource("7_7m2wx")
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_w8bku")
+theme_override_font_sizes/font_size = 36
+text = "—— 第一主题："
+horizontal_alignment = 1
+
+[node name="当前版本主题标签" type="Label" parent="主页面VBox/当前版本主题HBox" unique_id=1796211408]
+material = ExtResource("7_k540b")
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_w8bku")
+theme_override_font_sizes/font_size = 36
+text = "文心府卷"
+horizontal_alignment = 1
+
+[node name="右标签" type="Label" parent="主页面VBox/当前版本主题HBox" unique_id=11941738]
+material = ExtResource("7_7m2wx")
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_w8bku")
+theme_override_font_sizes/font_size = 36
+text = " ——"
+horizontal_alignment = 1
+
+[node name="按钮总容器" type="MarginContainer" parent="主页面VBox" unique_id=1964227036]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+script = ExtResource("3_oj0u6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="主页面VBox/按钮总容器" unique_id=1872124554]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="开始按钮" type="Button" parent="主页面VBox/按钮总容器/VBoxContainer" unique_id=1941075018]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "开始"
+flat = true
+
+[node name="读档按钮" type="Button" parent="主页面VBox/按钮总容器/VBoxContainer" unique_id=1288075105]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+disabled = true
+text = "读档"
+flat = true
+
+[node name="联机按钮" type="Button" parent="主页面VBox/按钮总容器/VBoxContainer" unique_id=1690463245]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+disabled = true
+text = "联机"
+flat = true
+
+[node name="设置按钮" type="Button" parent="主页面VBox/按钮总容器/VBoxContainer" unique_id=2145764755]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+disabled = true
+text = "设置"
+flat = true
+
+[node name="退出按钮" type="Button" parent="主页面VBox/按钮总容器/VBoxContainer" unique_id=506647769]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "退出"
+flat = true
+
+[node name="联机画布层" parent="." unique_id=1537579638 instance=ExtResource("11_oj0u6")]
+
+[node name="创建角色画布层" parent="." unique_id=234774999 instance=ExtResource("10_dc7gm")]
+visible = false
+
+[node name="存档画布层" parent="." unique_id=690636610 instance=ExtResource("12_oj0u6")]
+
+[node name="设置画布层" parent="." unique_id=1563701619 instance=ExtResource("10_75b6h")]
+visible = false
+
+[node name="电脑端按钮" parent="设置画布层/设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox/电脑端方式HBox" parent_id_path=PackedInt32Array(1563701619, 71336663) index="1" unique_id=1536177954]
+button_group = SubResource("ButtonGroup_dc7gm")
+
+[node name="手机端按钮" parent="设置画布层/设置总容器/设置界面/VBoxContainer/设置Scroll/设置VBox/游玩方式VBox/手机端方式HBox" parent_id_path=PackedInt32Array(1563701619, 1291889164) index="1" unique_id=1345822712]
+button_group = SubResource("ButtonGroup_dc7gm")
+
+[node name="临时的登录系统画布层" parent="." unique_id=1138835138 instance=ExtResource("14_dc7gm")]
+visible = false
+
+[node name="开始界面动画机" type="AnimationPlayer" parent="." unique_id=1823229602]
+libraries/ = SubResource("AnimationLibrary_w8bku")
+autoplay = &"界面渐变动画"
+
+[editable path="联机画布层"]
+[editable path="创建角色画布层"]
+[editable path="创建角色画布层/创建角色界面/创建角色界面VBox/编辑面板总HBox/人物信息编辑面板VBox/人物形象MC/玩家形象"]
+[editable path="存档画布层"]
+[editable path="设置画布层"]

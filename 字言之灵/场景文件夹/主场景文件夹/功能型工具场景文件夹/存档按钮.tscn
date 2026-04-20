@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://fx3spot4jg0n"]
+
+[ext_resource type="PackedScene" uid="uid://bc15s2ld6exdh" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/玩家形象.tscn" id="1_6303p"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="2_38w6q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnj7l"]
+atlas = ExtResource("2_38w6q")
+region = Rect2(96, 41, 16, 23)
+
+[node name="存档按钮" type="Button" unique_id=1281713912]
+custom_minimum_size = Vector2(0, 160)
+mouse_default_cursor_shape = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2133871308]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -877.0
+offset_right = 3.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="等级标签" type="Label" parent="HBoxContainer" unique_id=2010914416]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_constants/outline_size = 8
+text = "学术等级：100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="存档VBox" type="VBoxContainer" parent="HBoxContainer" unique_id=1865459342]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+theme_override_constants/separation = 36
+
+[node name="人物名标签" type="Label" parent="HBoxContainer/存档VBox" unique_id=285837897]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_constants/outline_size = 8
+text = "角色名：000CharacterName"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="游玩时长标签" type="Label" parent="HBoxContainer/存档VBox" unique_id=1675932090]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/outline_size = 8
+text = "游玩时长：0h"
+
+[node name="删档按钮" type="Button" parent="." unique_id=757918215]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_bottom = 36.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_wnj7l")
+icon_alignment = 1
+expand_icon = true
+
+[node name="玩家形象" parent="." unique_id=1488747565 instance=ExtResource("1_6303p")]
+position = Vector2(90, 52)
+scale = Vector2(4, 4)

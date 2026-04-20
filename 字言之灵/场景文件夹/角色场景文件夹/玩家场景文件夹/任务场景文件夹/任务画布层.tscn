@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cs78iv30wqo4r"]
+
+[ext_resource type="Texture2D" uid="uid://dddcgb2gsyxw5" path="res://图片文件夹/功能型工具图片文件夹/任务UI图片文件夹/任务面板UI精灵表.png" id="1_8vh3l"]
+[ext_resource type="Script" uid="uid://2kyfxf50bt08" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/任务UI脚本文件夹/任务画布层脚本.cs" id="1_jraf5"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="4_jraf5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnrhr"]
+atlas = ExtResource("1_8vh3l")
+region = Rect2(0, 0, 248, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jraf5"]
+atlas = ExtResource("4_jraf5")
+region = Rect2(128, 48, 16, 16)
+
+[node name="任务画布层" type="CanvasLayer" unique_id=1224977138]
+visible = false
+script = ExtResource("1_jraf5")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1189053284]
+custom_minimum_size = Vector2(372, 600)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -200.0
+offset_right = 124.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="背景" type="TextureRect" parent="MarginContainer" unique_id=504328304]
+layout_mode = 2
+texture = SubResource("AtlasTexture_jnrhr")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1501903379]
+clip_contents = false
+layout_mode = 2
+
+[node name="任务卡总VBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1153556608]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 540)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+
+[node name="任务关闭按钮" type="Button" parent="MarginContainer" unique_id=957030014]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_jraf5")
+icon_alignment = 1
+expand_icon = true

@@ -1,0 +1,827 @@
+[gd_scene format=3 uid="uid://b62mtewc6vuhn"]
+
+[ext_resource type="PackedScene" uid="uid://bc15s2ld6exdh" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/玩家形象.tscn" id="1_stni8"]
+[ext_resource type="Script" uid="uid://ct1nno0rrwds0" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/玩家动作脚本文件夹/玩家移动脚本.cs" id="2_6c1mt"]
+[ext_resource type="Script" uid="uid://d3lklxwt4xx6r" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/功能型工具脚本文件夹/提示按钮总节点脚本.cs" id="5_g4sbu"]
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="5_kd7j0"]
+[ext_resource type="Script" uid="uid://bbld2ofth0ci5" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/功能型工具脚本文件夹/UI面板总节点脚本.cs" id="6_frwjh"]
+[ext_resource type="PackedScene" uid="uid://cxdgvvrwou0g" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/摇杆.tscn" id="6_lfnqx"]
+[ext_resource type="PackedScene" uid="uid://cs78iv30wqo4r" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/任务场景文件夹/任务画布层.tscn" id="7_7t2ch"]
+[ext_resource type="PackedScene" uid="uid://cvpgibgld2ubo" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/背包场景文件夹/背包画布层.tscn" id="7_frwjh"]
+[ext_resource type="PackedScene" uid="uid://dh6gwj8bbm88q" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/任务场景文件夹/任务指引总节点.tscn" id="7_sdawi"]
+[ext_resource type="PackedScene" uid="uid://canses1lln2sr" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/身份证场景文件夹/身份证画布层.tscn" id="8_gj2bc"]
+[ext_resource type="Script" uid="uid://bq5tlreet2533" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/玩家场景数据文件夹/玩家场景数据节点脚本.cs" id="8_jml3p"]
+[ext_resource type="PackedScene" uid="uid://cjc5cnqm0fdxi" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/图鉴场景文件夹/图鉴画布层.tscn" id="11_a5quh"]
+[ext_resource type="PackedScene" uid="uid://cdlkk5g5i0civ" path="res://场景文件夹/角色场景文件夹/玩家场景文件夹/菜单栏场景文件夹/菜单栏画布层.tscn" id="12_hvxvf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5nalj"]
+radius = 9.0
+height = 36.0
+
+[sub_resource type="Animation" id="Animation_metuw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2whv5"]
+resource_name = "上待机动画"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_5nalj"]
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 8, 7, 10, 11, 10, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 5, 4, 7, 8, 7, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 6, 5, 9, 10, 9, 5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 1, 0, 3, 4, 3, 0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 6, 5, 8, 9, 8, 5]
+}
+
+[sub_resource type="Animation" id="Animation_6c1mt"]
+resource_name = "下待机动画"
+length = 3.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.8, 2.8999999, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_oar50"]
+resource_name = "下移动画"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.40000004, 0.50000006, 0.59999996, 0.7000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 3, 0, 5, 6, 5, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 1, 0, 3, 2, 3, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 1, 0, 3, 4, 3, 0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 1, 0, 3, 4, 3, 0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 1, 0, 3, 4, 3, 0]
+}
+
+[sub_resource type="Animation" id="Animation_ijyae"]
+resource_name = "右待机动画"
+length = 3.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.8, 2.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [19, 20, 21, 20]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [15]
+}
+
+[sub_resource type="Animation" id="Animation_xwp8l"]
+resource_name = "右移动动画"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [22, 23, 22, 19, 24, 25, 24, 19]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [13, 14, 13, 12, 13, 14, 13, 12]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [17, 18, 17, 16, 19, 20, 19, 16]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [11, 12, 11, 10, 13, 14, 13, 10]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 16, 15, 18, 19, 18, 15]
+}
+
+[sub_resource type="Animation" id="Animation_lfnqx"]
+resource_name = "左待机动画"
+length = 3.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.8, 2.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 13]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_28gdt"]
+resource_name = "左移动动画"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("图片总节点/人物身体精灵:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [15, 16, 15, 12, 17, 18, 17, 12]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("图片总节点/尾巴精灵:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 10, 9, 10, 11, 10, 9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("图片总节点/上衣精灵:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 12, 11, 14, 15, 14, 11]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("图片总节点/裤子精灵:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 6, 5, 8, 9, 8, 5]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("图片总节点/鞋子精灵:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [11, 12, 11, 10, 13, 14, 13, 10]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_metuw"]
+_data = {
+&"RESET": SubResource("Animation_metuw"),
+&"上待机动画": SubResource("Animation_2whv5"),
+&"上移动动画": SubResource("Animation_5nalj"),
+&"下待机动画": SubResource("Animation_6c1mt"),
+&"下移动动画": SubResource("Animation_oar50"),
+&"右待机动画": SubResource("Animation_ijyae"),
+&"右移动动画": SubResource("Animation_xwp8l"),
+&"左待机动画": SubResource("Animation_lfnqx"),
+&"左移动动画": SubResource("Animation_28gdt")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vwr0r"]
+animation = &"下待机动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tiopf"]
+animation = &"上待机动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v826j"]
+animation = &"左待机动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ggpka"]
+animation = &"右待机动画"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_5nalj"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_vwr0r")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_tiopf")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_v826j")
+blend_point_2/pos = Vector2(-1.1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_ggpka")
+blend_point_3/pos = Vector2(1.1, 0)
+min_space = Vector2(-1.1, -1)
+max_space = Vector2(1.1, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cm3oj"]
+animation = &"下移动动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lp645"]
+animation = &"上移动动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vay83"]
+animation = &"左移动动画"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uha7v"]
+animation = &"右移动动画"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_ijyae"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_cm3oj")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_lp645")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_vay83")
+blend_point_2/pos = Vector2(-1.1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_uha7v")
+blend_point_3/pos = Vector2(1.1, 0)
+min_space = Vector2(-1.1, -1)
+max_space = Vector2(1.1, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_6c1mt"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_j7yer"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_t6oxm"]
+nodes/output/position = Vector2(1040, 140)
+"nodes/移动系统B2/node" = SubResource("AnimationNodeBlend2_6c1mt")
+"nodes/移动系统B2/position" = Vector2(720, 80)
+"nodes/待机BS2D/node" = SubResource("AnimationNodeBlendSpace2D_5nalj")
+"nodes/待机BS2D/position" = Vector2(-220, -40)
+"nodes/移动BS2D/node" = SubResource("AnimationNodeBlendSpace2D_ijyae")
+"nodes/移动BS2D/position" = Vector2(-220, 260)
+"nodes/移速TS/node" = SubResource("AnimationNodeTimeScale_j7yer")
+"nodes/移速TS/position" = Vector2(380, 280)
+node_connections = [&"output", 0, &"移动系统B2", &"移动系统B2", 0, &"待机BS2D", &"移动系统B2", 1, &"移速TS", &"移速TS", 0, &"移动BS2D"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd7j0"]
+atlas = ExtResource("5_kd7j0")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="Animation" id="Animation_frwjh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("提示按钮精灵:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g4sbu"]
+resource_name = "提示按钮动画"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("提示按钮精灵:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 1), Color(0.6872149, 0.68721503, 0.6872149, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frwjh"]
+_data = {
+&"RESET": SubResource("Animation_frwjh"),
+&"提示按钮动画": SubResource("Animation_g4sbu")
+}
+
+[node name="玩家" unique_id=1283281147 instance=ExtResource("1_stni8")]
+collision_mask = 6
+script = ExtResource("2_6c1mt")
+
+[node name="玩家碰撞体" type="CollisionShape2D" parent="." index="0" unique_id=1982609558]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_5nalj")
+
+[node name="玩家动画机" type="AnimationPlayer" parent="." index="2" unique_id=220065663]
+libraries/ = SubResource("AnimationLibrary_metuw")
+autoplay = &"下待机动画"
+
+[node name="玩家动画树" type="AnimationTree" parent="." index="3" unique_id=610103856]
+tree_root = SubResource("AnimationNodeBlendTree_t6oxm")
+anim_player = NodePath("../玩家动画机")
+"parameters/移动系统B2/blend_amount" = 0.0
+"parameters/待机BS2D/blend_position" = Vector2(0, 0)
+"parameters/移动BS2D/blend_position" = Vector2(0, 0)
+"parameters/移速TS/scale" = 1.0
+
+[node name="提示按钮总节点" type="Node2D" parent="." index="4" unique_id=1431267226]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+position = Vector2(0, -24)
+script = ExtResource("5_g4sbu")
+
+[node name="提示按钮精灵" type="Sprite2D" parent="提示按钮总节点" index="0" unique_id=1935705987]
+position = Vector2(0, -22)
+texture = SubResource("AtlasTexture_kd7j0")
+
+[node name="提示按钮标签" type="Label" parent="提示按钮总节点/提示按钮精灵" index="0" unique_id=2044823835]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -14.0
+offset_right = -5.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 8
+text = "F"
+
+[node name="提示按钮动画机" type="AnimationPlayer" parent="提示按钮总节点" index="1" unique_id=1546710076]
+libraries/ = SubResource("AnimationLibrary_frwjh")
+
+[node name="UI面板总节点" type="Node2D" parent="." index="5" unique_id=1587373111]
+top_level = true
+script = ExtResource("6_frwjh")
+
+[node name="任务指引总节点" parent="UI面板总节点" index="0" unique_id=1809153731 instance=ExtResource("7_sdawi")]
+
+[node name="操作摇杆画布层" parent="UI面板总节点" index="1" unique_id=1770193678 instance=ExtResource("6_lfnqx")]
+unique_name_in_owner = true
+visible = false
+
+[node name="任务画布层" parent="UI面板总节点" index="2" unique_id=1224977138 instance=ExtResource("7_7t2ch")]
+
+[node name="背包画布层" parent="UI面板总节点" index="3" unique_id=1737993657 instance=ExtResource("7_frwjh")]
+
+[node name="身份证画布层" parent="UI面板总节点" index="4" unique_id=166040666 instance=ExtResource("8_gj2bc")]
+unique_name_in_owner = true
+
+[node name="图鉴画布层" parent="UI面板总节点" index="5" unique_id=1210596483 instance=ExtResource("11_a5quh")]
+
+[node name="菜单栏画布层" parent="UI面板总节点" index="6" unique_id=1192880537 instance=ExtResource("12_hvxvf")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI面板总节点" index="7" unique_id=1208252823]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI面板总节点/CanvasLayer" index="0" unique_id=618544403]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.0
+offset_right = 66.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="UI面板总节点/CanvasLayer/HBoxContainer" index="0" unique_id=817405419]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "ID："
+
+[node name="ID标签" type="Label" parent="UI面板总节点/CanvasLayer/HBoxContainer" index="1" unique_id=1832923204]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/outline_size = 4
+
+[node name="玩家场景数据节点" type="Node" parent="." index="6" unique_id=946141517]
+unique_name_in_owner = true
+script = ExtResource("8_jml3p")

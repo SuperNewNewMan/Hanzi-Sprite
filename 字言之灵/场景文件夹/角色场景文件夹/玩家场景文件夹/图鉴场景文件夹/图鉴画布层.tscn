@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cjc5cnqm0fdxi"]
+
+[ext_resource type="Texture2D" uid="uid://eoy0wwm7fwx6" path="res://图片文件夹/功能型工具图片文件夹/通用图片文件夹/功能型工具精灵表.png" id="1_2hr53"]
+[ext_resource type="Script" uid="uid://cbpjwoap4npep" path="res://脚本文件夹/角色脚本文件夹/玩家脚本文件夹/图鉴UI脚本文件夹/图鉴画布层脚本.cs" id="1_txwd7"]
+[ext_resource type="FontFile" uid="uid://d1dobb4abxxbf" path="res://字体文件夹/方正北魏楷书简体.ttf" id="2_1n264"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00eep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvmvx"]
+atlas = ExtResource("1_2hr53")
+region = Rect2(128, 48, 16, 16)
+
+[node name="图鉴画布层" type="CanvasLayer" unique_id=1210596483]
+visible = false
+script = ExtResource("1_txwd7")
+
+[node name="Control" type="Control" parent="." unique_id=1711852748]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=182979911]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -240.0
+offset_right = 480.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_00eep")
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=1433564939]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 28.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 8
+text = "图鉴（字典）"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/Panel" unique_id=416745811]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -200.0
+offset_right = 450.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/Panel/MarginContainer2" unique_id=1088350794]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Panel/MarginContainer2" unique_id=598612098]
+layout_mode = 2
+
+[node name="槽位GC" type="GridContainer" parent="Control/Panel/MarginContainer2/ScrollContainer" unique_id=344448811]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+columns = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel" unique_id=5872753]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -112.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="Control/Panel/MarginContainer" unique_id=1800075764]
+layout_mode = 2
+
+[node name="字义标签" type="Label" parent="Control/Panel/MarginContainer/Panel" unique_id=432878239]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1n264")
+
+[node name="关闭面板按钮" type="Button" parent="Control/Panel" unique_id=1010176445]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_pvmvx")
+expand_icon = true

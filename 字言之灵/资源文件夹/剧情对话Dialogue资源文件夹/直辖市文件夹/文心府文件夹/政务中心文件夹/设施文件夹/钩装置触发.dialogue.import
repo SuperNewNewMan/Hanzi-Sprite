@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://baoni2ifnx1ys"
+path="res://.godot/imported/钩装置触发.dialogue-8bdc1ad2336ad85c2544f07952c8259c.tres"
+
+[deps]
+
+source_file="res://资源文件夹/剧情对话Dialogue资源文件夹/直辖市文件夹/文心府文件夹/政务中心文件夹/设施文件夹/钩装置触发.dialogue"
+dest_files=["res://.godot/imported/钩装置触发.dialogue-8bdc1ad2336ad85c2544f07952c8259c.tres"]
+
+[params]
+
+defaults=true
